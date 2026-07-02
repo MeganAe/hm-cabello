@@ -246,17 +246,17 @@
 
 
 
-<main class="pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<main class="pt-28 md:pt-32 pb-16 md:pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <!-- Hero Section -->
-<header class="mb-section-gap text-center md:text-left">
-<h1 class="font-headline-lg text-headline-lg md:text-display-lg text-primary mb-4">Contactez l'Excellence</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+<header class="mb-10 md:mb-section-gap text-center md:text-left">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Contactez l'Excellence</h1>
+<p class="font-body-md text-body-md md:text-body-lg text-on-surface-variant max-w-2xl mx-auto md:mx-0">
                 Que vous recherchiez des conseils personnalisés pour votre prochaine parure ou que vous ayez une question sur nos collections, notre équipe dédiée à Bukavu est à votre entière disposition.
             </p>
 </header>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
 <!-- Contact Form -->
-<section class="md:col-span-7 bg-surface-container-low p-8 md:p-12 rounded-xl luxury-shadow">
+<section class="md:col-span-7 bg-surface-container-low p-6 md:p-12 rounded-xl luxury-shadow">
 <h2 class="font-headline-md text-headline-md text-primary mb-8">Envoyez-nous un message</h2>
 <form class="space-y-8" onsubmit="event.preventDefault();">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
@@ -280,7 +280,7 @@
 </section>
 <!-- Location Details & Map -->
 <aside class="md:col-span-5 space-y-10">
-<div class="bg-surface-container-highest p-8 md:p-10 rounded-xl luxury-shadow border border-surface-variant">
+<div class="bg-surface-container-highest p-6 md:p-10 rounded-xl luxury-shadow border border-surface-variant">
 <h3 class="font-headline-md text-headline-md text-primary mb-6">Notre Boutique</h3>
 <div class="space-y-6">
 <div class="flex items-start gap-4">
@@ -321,9 +321,9 @@
 </aside>
 </div>
 <!-- Instagram/Social Banner -->
-<section class="mt-section-gap text-center py-20 bg-surface-container-low rounded-xl border border-surface-variant">
+<section class="mt-10 md:mt-section-gap text-center py-10 md:py-20 px-margin-mobile bg-surface-container-low rounded-xl border border-surface-variant overflow-hidden">
 <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-4 block">Rejoignez la communauté</span>
-<h2 class="font-headline-lg text-headline-lg text-primary mb-8">@HM_CABELLO_OFFICIAL</h2>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-8 break-all">@HM_CABELLO_OFFICIAL</h2>
 <div class="flex justify-center gap-6">
 <a class="w-12 h-12 flex items-center justify-center rounded-full border border-outline-variant hover:bg-primary hover:text-white transition-all text-primary" href="boutique.html">
 <span class="material-symbols-outlined">public</span>
@@ -352,28 +352,29 @@
         });
 
         // Simple Fade-in effect for the sections
-        const observerOptions = {
-            threshold: 0.1
-        };
-
+        const observerOptions = { threshold: 0.08 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    entry.target.classList.remove('opacity-0', 'translate-y-6');
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
         document.querySelectorAll('section, aside').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            const rect = section.getBoundingClientRect();
+            const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+            if (isInView) return; // skip elements already visible
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-6');
             observer.observe(section);
         });
     </script>
 
 
 <footer class="bg-surface-container-high dark:bg-surface-container-highest w-full">
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-12 md:py-section-gap max-w-container-max mx-auto">
     <div class="space-y-5">
       <div class="font-headline-lg text-headline-lg text-primary">HM CABELLO</div>
       <p class="font-body-md text-body-md text-on-surface-variant">L'excellence capillaire au coeur de Bukavu. Perruques, tissages, extensions et clip-ins premium.</p>
