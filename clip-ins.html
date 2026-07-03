@@ -1,350 +1,688 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="light" lang="fr">
-<head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Clip-ins Extensions | HM CABELLO Luxury</title>
-  <meta name="description" content="HM CABELLO, boutique de perruques, tissages, extensions et clip-ins à Bukavu, RDC.">
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-  <style>
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
-      font-size: 20px;
-    }
-    .text-bordeaux { color: #400419; }
-    .bg-bordeaux { background-color: #400419; }
-    .border-bordeaux { border-color: #400419; }
-    
-    .fade-in-section {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-    .fade-in-section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    .product-card:hover .product-image {
-      transform: scale(1.05);
-    }
-    .nav-underline {
-      position: relative;
-    }
-    .nav-underline::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 1px;
-      bottom: -2px;
-      left: 50%;
-      background-color: #400419;
-      transition: all 0.3s ease;
-      transform: translateX(-50%);
-    }
-    .nav-underline:hover::after {
-      width: 100%;
-    }
-  </style>
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          "colors": {
-            "background": "#fff8f7",
-            "primary-fixed-dim": "#ffb1c1",
-            "on-tertiary-container": "#70a77b",
-            "tertiary-fixed-dim": "#9cd4a5",
-            "on-surface": "#211a1b",
-            "on-primary-fixed": "#3e0218",
-            "inverse-surface": "#372e30",
-            "on-primary-container": "#da8095",
-            "surface-container-high": "#f4e5e6",
-            "on-secondary-container": "#745c00",
-            "surface-dim": "#e5d7d8",
-            "surface-container-lowest": "#ffffff",
-            "secondary-container": "#fed65b",
-            "outline-variant": "#d8c1c4",
-            "tertiary-container": "#003b1a",
-            "on-secondary": "#ffffff",
-            "inverse-primary": "#ffb1c1",
-            "surface-container-highest": "#eedfe0",
-            "on-secondary-fixed": "#241a00",
-            "on-error": "#ffffff",
-            "on-secondary-fixed-variant": "#574500",
-            "on-primary": "#ffffff",
-            "on-surface-variant": "#534345",
-            "secondary": "#735c00",
-            "secondary-fixed-dim": "#e9c349",
-            "error": "#ba1a1a",
-            "surface-container-low": "#fff0f1",
-            "surface": "#fff8f7",
-            "on-tertiary-fixed-variant": "#1c502d",
-            "surface-bright": "#fff8f7",
-            "on-tertiary-fixed": "#00210c",
-            "on-error-container": "#93000a",
-            "tertiary-fixed": "#b7f0c0",
-            "secondary-fixed": "#ffe088",
-            "on-background": "#211a1b",
-            "error-container": "#ffdad6",
-            "primary": "#400419",
-            "surface-tint": "#934659",
-            "tertiary": "#00230d",
-            "primary-container": "#5c1a2e",
-            "outline": "#867275",
-            "on-tertiary": "#ffffff",
-            "inverse-on-surface": "#fcedee",
-            "surface-variant": "#eedfe0",
-            "surface-container": "#faeaec",
-            "primary-fixed": "#ffd9df",
-            "on-primary-fixed-variant": "#762e42"
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Clip-ins Extensions | HM CABELLO Luxury</title>
+    <meta
+      name="description"
+      content="HM CABELLO, boutique de perruques, tissages, extensions et clip-ins à Bukavu, RDC."
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 200,
+          "GRAD" 0,
+          "opsz" 24;
+        font-size: 20px;
+      }
+      .text-bordeaux {
+        color: #400419;
+      }
+      .bg-bordeaux {
+        background-color: #400419;
+      }
+      .border-bordeaux {
+        border-color: #400419;
+      }
+
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.8s ease-out,
+          transform 0.8s ease-out;
+      }
+      .fade-in-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .product-card:hover .product-image {
+        transform: scale(1.05);
+      }
+      .nav-underline {
+        position: relative;
+      }
+      .nav-underline::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -2px;
+        left: 50%;
+        background-color: #400419;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+      .nav-underline:hover::after {
+        width: 100%;
+      }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              background: "#fff8f7",
+              "primary-fixed-dim": "#ffb1c1",
+              "on-tertiary-container": "#70a77b",
+              "tertiary-fixed-dim": "#9cd4a5",
+              "on-surface": "#211a1b",
+              "on-primary-fixed": "#3e0218",
+              "inverse-surface": "#372e30",
+              "on-primary-container": "#da8095",
+              "surface-container-high": "#f4e5e6",
+              "on-secondary-container": "#745c00",
+              "surface-dim": "#e5d7d8",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#fed65b",
+              "outline-variant": "#d8c1c4",
+              "tertiary-container": "#003b1a",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#ffb1c1",
+              "surface-container-highest": "#eedfe0",
+              "on-secondary-fixed": "#241a00",
+              "on-error": "#ffffff",
+              "on-secondary-fixed-variant": "#574500",
+              "on-primary": "#ffffff",
+              "on-surface-variant": "#534345",
+              secondary: "#735c00",
+              "secondary-fixed-dim": "#e9c349",
+              error: "#ba1a1a",
+              "surface-container-low": "#fff0f1",
+              surface: "#fff8f7",
+              "on-tertiary-fixed-variant": "#1c502d",
+              "surface-bright": "#fff8f7",
+              "on-tertiary-fixed": "#00210c",
+              "on-error-container": "#93000a",
+              "tertiary-fixed": "#b7f0c0",
+              "secondary-fixed": "#ffe088",
+              "on-background": "#211a1b",
+              "error-container": "#ffdad6",
+              primary: "#400419",
+              "surface-tint": "#934659",
+              tertiary: "#00230d",
+              "primary-container": "#5c1a2e",
+              outline: "#867275",
+              "on-tertiary": "#ffffff",
+              "inverse-on-surface": "#fcedee",
+              "surface-variant": "#eedfe0",
+              "surface-container": "#faeaec",
+              "primary-fixed": "#ffd9df",
+              "on-primary-fixed-variant": "#762e42",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "margin-mobile": "20px",
+              gutter: "24px",
+              "container-max": "1280px",
+              unit: "8px",
+              "section-gap": "120px",
+              "margin-desktop": "64px",
+            },
+            fontFamily: {
+              "headline-lg": ["Playfair Display"],
+              "label-lg": ["Inter"],
+              "headline-md": ["Playfair Display"],
+              "label-sm": ["Inter"],
+              "display-lg": ["Playfair Display"],
+              "body-md": ["Inter"],
+              "headline-lg-mobile": ["Playfair Display"],
+              "display-lg-mobile": ["Playfair Display"],
+              "body-lg": ["Inter"],
+            },
+            fontSize: {
+              "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "400" }],
+              "label-lg": [
+                "14px",
+                { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "600" },
+              ],
+              "headline-md": ["32px", { lineHeight: "1.4", fontWeight: "400" }],
+              "label-sm": [
+                "12px",
+                { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "500" },
+              ],
+              "display-lg": [
+                "64px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+              "headline-lg-mobile": [
+                "32px",
+                { lineHeight: "1.3", fontWeight: "400" },
+              ],
+              "display-lg-mobile": [
+                "40px",
+                { lineHeight: "1.2", fontWeight: "700" },
+              ],
+              "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+            },
           },
-          "borderRadius": {
-            "DEFAULT": "0.125rem",
-            "lg": "0.25rem",
-            "xl": "0.5rem",
-            "full": "0.75rem"
-          },
-          "spacing": {
-            "margin-mobile": "20px",
-            "gutter": "24px",
-            "container-max": "1280px",
-            "unit": "8px",
-            "section-gap": "120px",
-            "margin-desktop": "64px"
-          },
-          "fontFamily": {
-            "headline-lg": ["Playfair Display"],
-            "label-lg": ["Inter"],
-            "headline-md": ["Playfair Display"],
-            "label-sm": ["Inter"],
-            "display-lg": ["Playfair Display"],
-            "body-md": ["Inter"],
-            "headline-lg-mobile": ["Playfair Display"],
-            "display-lg-mobile": ["Playfair Display"],
-            "body-lg": ["Inter"]
-          },
-          "fontSize": {
-            "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
-            "label-lg": ["14px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
-            "headline-md": ["32px", {"lineHeight": "1.4", "fontWeight": "400"}],
-            "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
-            "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-            "headline-lg-mobile": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
-            "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
-            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
-          }
         },
-      },
-    }
-  </script>
-  <link rel="stylesheet" href="assets/css/style.css?v=3">
-</head>
-<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-primary overflow-x-hidden">
-  
-  <!-- Header -->
-  <header class="fixed full-width top-0 z-50 bg-background/80 backdrop-blur-md w-full">
-    <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto h-20">
-      <a class="font-headline-md text-headline-md font-normal text-primary tracking-widest uppercase" href="index.html">
-        <img class="h-10 w-auto" src="assets/images/logo/hm-cabello-wordmark.svg" alt="HM CABELLO" />
-      </a>
-      <div class="hidden md:flex items-center space-x-10">
-        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline" href="index.html">Accueil</a>
-        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline" href="boutique.html">Boutique</a>
-        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline" href="perruques.html">Perruques</a>
-        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline" href="tissages.html">Tissages</a>
-        <a class="font-label-lg text-label-lg text-primary border-b-2 border-primary pb-1 transition-all" href="clip-ins.html">Clip-ins</a>
-        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline" href="bijoux.html">Bijoux</a>
-        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline" href="contact.html">Contact</a>
-      </div>
-      <div class="flex items-center space-x-6">
-        <button class="text-on-surface-variant hover:text-primary transition-colors active:scale-95 duration-200" type="button" data-action="search" aria-label="Rechercher">
-          <span class="material-symbols-outlined" data-icon="search">search</span>
-        </button>
-        <button class="text-on-surface-variant hover:text-primary transition-colors active:scale-95 duration-200" type="button" data-action="account" aria-label="Compte client">
-          <span class="material-symbols-outlined" data-icon="person">person</span>
-        </button>
-        <button class="text-on-surface-variant hover:text-primary transition-colors active:scale-95 duration-200 relative" type="button" data-action="cart" aria-label="Panier">
-          <span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
-          <span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center" data-cart-count>0</span>
-        </button>
-        <button class="md:hidden text-on-surface-variant hover:text-primary transition-colors active:scale-95 duration-200" type="button" data-mobile-toggle aria-label="Ouvrir le menu" aria-expanded="false">
-          <span class="material-symbols-outlined" data-mobile-icon>menu</span>
-        </button>
-      </div>
-    </nav>
-    <div class="hm-mobile-panel md:hidden bg-background border-t border-outline-variant/40 px-margin-mobile py-4" data-mobile-panel>
-      <a class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3" href="index.html">Accueil</a>
-      <a class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3" href="boutique.html">Boutique</a>
-      <a class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3" href="perruques.html">Perruques</a>
-      <a class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3" href="tissages.html">Tissages</a>
-      <a class="block font-label-lg text-label-lg text-primary py-3" href="clip-ins.html">Clip-ins</a>
-      <a class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3" href="bijoux.html">Bijoux</a>
-      <a class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3" href="contact.html">Contact</a>
-    </div>
-  </header>
-
-  <main class="pt-24">
-    <!-- Hero Banner -->
-    <section class="relative h-[60vh] md:h-[80vh] min-h-[500px] w-full overflow-hidden flex items-center mt-0">
-      <div class="absolute inset-0 z-0">
-        <div class="w-full h-full bg-cover bg-center transition-transform duration-[10000ms] scale-105 hover:scale-100" style="background-image: url('assets/images/clip-ins/clip-in-longues-vagues-01.png')"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-background/60 to-transparent"></div>
-      </div>
-      <div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
-        <div class="max-w-xl fade-in-section">
-          <span class="font-label-sm text-label-sm text-primary mb-4 block tracking-[0.2em] uppercase">Transformation Instantanée</span>
-          <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">L'élégance à portée de main</h1>
-          <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">Découvrez nos Clip-ins 100% cheveux vierges. Volume, longueur et assurance en moins de 10 minutes. Conçus pour la femme moderne de Bukavu.</p>
-          <div class="flex space-x-4">
-            <button class="bg-primary text-white px-10 py-4 rounded-xl font-label-lg text-label-lg hover:bg-primary-container transition-all uppercase tracking-widest text-[12px]" type="button">Découvrir la collection</button>
-            <button class="border border-primary text-primary px-10 py-4 rounded-xl font-label-lg text-label-lg hover:bg-primary hover:text-white transition-all uppercase tracking-widest text-[12px]" type="button">Voir le Guide</button>
-          </div>
+      };
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css?v=3" />
+  </head>
+  <body
+    class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-primary overflow-x-hidden"
+  >
+    <!-- Header -->
+    <header
+      class="fixed full-width top-0 z-50 bg-background/80 backdrop-blur-md w-full"
+    >
+      <nav
+        class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto h-20"
+      >
+        <a
+          class="font-headline-md text-headline-md font-normal text-primary tracking-widest uppercase"
+          href="index.html"
+        >
+          <img
+            class="h-10 w-auto"
+            src="assets/images/logo/hm-cabello-wordmark.svg"
+            alt="HM CABELLO"
+          />
+        </a>
+        <div class="hidden md:flex items-center space-x-10">
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline"
+            href="index.html"
+            >Accueil</a
+          >
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline"
+            href="boutique.html"
+            >Boutique</a
+          >
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline"
+            href="perruques.html"
+            >Perruques</a
+          >
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline"
+            href="tissages.html"
+            >Tissages</a
+          >
+          <a
+            class="font-label-lg text-label-lg text-primary border-b-2 border-primary pb-1 transition-all"
+            href="clip-ins.html"
+            >Clip-ins</a
+          >
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline"
+            href="bijoux.html"
+            >Bijoux</a
+          >
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline"
+            href="contact.html"
+            >Contact</a
+          >
         </div>
-      </div>
-    </section>
-
-    <!-- Product Grid Section -->
-    <section class="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-end mb-16 fade-in-section text-center md:text-left gap-6">
-        <div>
-          <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Nos Incontournables</h2>
-          <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Sélectionnez la texture et la longueur parfaites pour votre style unique.</p>
-        </div>
-        <div class="mt-8 md:mt-0 flex space-x-4">
-          <button class="flex items-center space-x-2 font-label-sm text-label-sm border-b border-outline-variant pb-1" type="button">
-            <span>FILTRER PAR LONGUEUR</span>
-            <span class="material-symbols-outlined text-sm" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+        <div class="flex items-center space-x-6">
+          <button
+            class="text-on-surface-variant hover:text-primary transition-colors active:scale-95 duration-200"
+            type="button"
+            data-action="search"
+            aria-label="Rechercher"
+          >
+            <span class="material-symbols-outlined" data-icon="search"
+              >search</span
+            >
           </button>
-          <button class="flex items-center space-x-2 font-label-sm text-label-sm border-b border-outline-variant pb-1" type="button">
-            <span>TRIER PAR</span>
-            <span class="material-symbols-outlined text-sm" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+          <button
+            class="text-on-surface-variant hover:text-primary transition-colors active:scale-95 duration-200"
+            type="button"
+            data-action="account"
+            aria-label="Compte client"
+          >
+            <span class="material-symbols-outlined" data-icon="person"
+              >person</span
+            >
+          </button>
+          <button
+            class="text-on-surface-variant hover:text-primary transition-colors active:scale-95 duration-200 relative"
+            type="button"
+            data-action="cart"
+            aria-label="Panier"
+          >
+            <span class="material-symbols-outlined" data-icon="shopping_bag"
+              >shopping_bag</span
+            >
+            <span
+              class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center"
+              data-cart-count
+              >0</span
+            >
+          </button>
+          <button
+            class="md:hidden text-on-surface-variant hover:text-primary transition-colors active:scale-95 duration-200"
+            type="button"
+            data-mobile-toggle
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+          >
+            <span class="material-symbols-outlined" data-mobile-icon>menu</span>
           </button>
         </div>
+      </nav>
+      <div
+        class="hm-mobile-panel md:hidden bg-background border-t border-outline-variant/40 px-margin-mobile py-4"
+        data-mobile-panel
+      >
+        <a
+          class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3"
+          href="index.html"
+          >Accueil</a
+        >
+        <a
+          class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3"
+          href="boutique.html"
+          >Boutique</a
+        >
+        <a
+          class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3"
+          href="perruques.html"
+          >Perruques</a
+        >
+        <a
+          class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3"
+          href="tissages.html"
+          >Tissages</a
+        >
+        <a
+          class="block font-label-lg text-label-lg text-primary py-3"
+          href="clip-ins.html"
+          >Clip-ins</a
+        >
+        <a
+          class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3"
+          href="bijoux.html"
+          >Bijoux</a
+        >
+        <a
+          class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3"
+          href="contact.html"
+          >Contact</a
+        >
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter" data-products-grid>
-        <!-- Loaded dynamically from PRODUCTS via initClipinsPage() -->
-      </div>
-    </section>
+    </header>
 
-    <!-- "How to install" Mini-guide -->
-    <section class="bg-surface-container-high py-16 md:py-section-gap">
-      <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-        <div class="text-center mb-16 fade-in-section">
-          <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Guide d'Installation</h2>
-          <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Sublimez votre regard en quelques étapes simples. Pas besoin de styliste, juste d'un miroir et de votre confiance.</p>
+    <main class="pt-24">
+      <!-- Hero Banner -->
+      <section
+        class="relative h-[60vh] md:h-[80vh] min-h-[500px] w-full overflow-hidden flex items-center mt-0"
+      >
+        <div class="absolute inset-0 z-0">
+          <div
+            class="w-full h-full bg-cover bg-center transition-transform duration-[10000ms] scale-105 hover:scale-100"
+            style="
+              background-image: url(&quot;assets/images/clip-ins/clip-in-longues-vagues-01.png&quot;);
+            "
+          ></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-background/60 to-transparent"
+          ></div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-gutter gap-y-12">
-          <div class="text-center fade-in-section">
-            <div class="w-16 h-16 bg-background rounded-full flex items-center justify-center mx-auto mb-6 text-primary shadow-sm border border-outline-variant/35">
-              <span class="material-symbols-outlined text-3xl">content_cut</span>
+        <div
+          class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full"
+        >
+          <div class="max-w-xl fade-in-section">
+            <span
+              class="font-label-sm text-label-sm text-primary mb-4 block tracking-[0.2em] uppercase"
+              >Transformation Instantanée</span
+            >
+            <h1
+              class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6"
+            >
+              L'élégance à portée de main
+            </h1>
+            <p
+              class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed"
+            >
+              Découvrez nos Clip-ins 100% cheveux vierges. Volume, longueur et
+              assurance en moins de 10 minutes. Conçus pour la femme moderne de
+              Bukavu.
+            </p>
+            <div class="flex space-x-4">
+              <button
+                class="bg-primary text-white px-10 py-4 rounded-xl font-label-lg text-label-lg hover:bg-primary-container transition-all uppercase tracking-widest text-[12px]"
+                type="button"
+              >
+                Découvrir la collection
+              </button>
+              <button
+                class="border border-primary text-primary px-10 py-4 rounded-xl font-label-lg text-label-lg hover:bg-primary hover:text-white transition-all uppercase tracking-widest text-[12px]"
+                type="button"
+              >
+                Voir le Guide
+              </button>
             </div>
-            <h4 class="font-label-lg text-label-lg text-primary mb-3">1. SECTIONNER</h4>
-            <p class="font-body-md text-body-md text-on-surface-variant text-sm px-4">Séparez une mèche horizontale à la base de votre nuque.</p>
-          </div>
-          <div class="text-center fade-in-section">
-            <div class="w-16 h-16 bg-background rounded-full flex items-center justify-center mx-auto mb-6 text-primary shadow-sm border border-outline-variant/35">
-              <span class="material-symbols-outlined text-3xl">brush</span>
-            </div>
-            <h4 class="font-label-lg text-label-lg text-primary mb-3">2. CRÊPER</h4>
-            <p class="font-body-md text-body-md text-on-surface-variant text-sm px-4">Brossez légèrement la racine pour une tenue maximale des clips.</p>
-          </div>
-          <div class="text-center fade-in-section">
-            <div class="w-16 h-16 bg-background rounded-full flex items-center justify-center mx-auto mb-6 text-primary shadow-sm border border-outline-variant/35">
-              <span class="material-symbols-outlined text-3xl">lock</span>
-            </div>
-            <h4 class="font-label-lg text-label-lg text-primary mb-3">3. CLIPSER</h4>
-            <p class="font-body-md text-body-md text-on-surface-variant text-sm px-4">Ouvrez les clips, insérez et fermez fermement contre la racine.</p>
-          </div>
-          <div class="text-center fade-in-section">
-            <div class="w-16 h-16 bg-background rounded-full flex items-center justify-center mx-auto mb-6 text-primary shadow-sm border border-outline-variant/35">
-              <span class="material-symbols-outlined text-3xl">auto_awesome</span>
-            </div>
-            <h4 class="font-label-lg text-label-lg text-primary mb-3">4. MÉLANGER</h4>
-            <p class="font-body-md text-body-md text-on-surface-variant text-sm px-4">Relâchez vos cheveux et brossez l'ensemble pour un fini naturel.</p>
           </div>
         </div>
-        <div class="mt-16 md:mt-20 rounded-2xl overflow-hidden relative h-[250px] md:h-[400px] fade-in-section shadow-lg border border-outline-variant/30">
-          <div class="w-full h-full bg-cover bg-center" style="background-image: url('assets/images/perruques/perruque-longue-vagues-glam-01.png')"></div>
-          <div class="absolute inset-0 flex items-center justify-center bg-black/10">
-            <button class="bg-white/20 backdrop-blur-md p-6 rounded-full text-white hover:scale-110 transition-transform" type="button">
-              <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+      </section>
+
+      <!-- Product Grid Section -->
+      <section
+        class="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-16 fade-in-section text-center md:text-left gap-6"
+        >
+          <div>
+            <h2
+              class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4"
+            >
+              Nos Incontournables
+            </h2>
+            <p
+              class="font-body-md text-body-md text-on-surface-variant max-w-md"
+            >
+              Sélectionnez la texture et la longueur parfaites pour votre style
+              unique.
+            </p>
+          </div>
+          <div class="mt-8 md:mt-0 flex space-x-4">
+            <button
+              class="flex items-center space-x-2 font-label-sm text-label-sm border-b border-outline-variant pb-1"
+              type="button"
+            >
+              <span>FILTRER PAR LONGUEUR</span>
+              <span
+                class="material-symbols-outlined text-sm"
+                data-icon="keyboard_arrow_down"
+                >keyboard_arrow_down</span
+              >
+            </button>
+            <button
+              class="flex items-center space-x-2 font-label-sm text-label-sm border-b border-outline-variant pb-1"
+              type="button"
+            >
+              <span>TRIER PAR</span>
+              <span
+                class="material-symbols-outlined text-sm"
+                data-icon="keyboard_arrow_down"
+                >keyboard_arrow_down</span
+              >
             </button>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop text-center max-w-2xl mx-auto fade-in-section">
-      <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">Prête pour votre métamorphose?</h2>
-      <p class="font-body-lg text-body-lg text-on-surface-variant mb-10">Rejoignez les milliers de femmes qui ont choisi HM CABELLO pour leur routine beauté quotidienne.</p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4 px-4 sm:px-0">
-        <input class="px-6 py-4 rounded-xl border border-outline focus:border-primary outline-none bg-transparent min-w-[260px] text-on-surface placeholder:text-on-surface-variant/40" placeholder="Votre adresse email" type="email"/>
-        <button class="bg-primary text-white px-8 py-4 rounded-xl font-label-lg text-label-lg hover:shadow-lg transition-all uppercase tracking-widest text-[12px]" type="button">S'ABONNER &amp; PROFITER DE -10%</button>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-surface-container-high dark:bg-surface-container-highest w-full">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-16 md:py-section-gap max-w-container-max mx-auto">
-      <div class="space-y-5">
-        <div class="font-headline-lg text-headline-lg text-primary">HM CABELLO</div>
-        <p class="font-body-md text-body-md text-on-surface-variant">L'excellence capillaire au coeur de Bukavu. Perruques, tissages, extensions et clip-ins premium.</p>
-      </div>
-      <div>
-        <h3 class="font-label-lg text-label-lg uppercase text-primary mb-6">Collections</h3>
-        <div class="space-y-3 font-body-md text-body-md text-on-surface-variant">
-          <a class="block hover:text-primary" href="perruques.html">Perruques</a>
-          <a class="block hover:text-primary" href="tissages.html">Tissages</a>
-          <a class="block hover:text-primary" href="clip-ins.html">Clip-ins</a>
-          <a class="block hover:text-primary" href="bijoux.html">Bijoux</a>
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-gutter"
+          data-products-grid
+        >
+          <!-- Loaded dynamically from PRODUCTS via initClipinsPage() -->
         </div>
-      </div>
-      <div>
-        <h3 class="font-label-lg text-label-lg uppercase text-primary mb-6">Boutique</h3>
-        <div class="space-y-3 font-body-md text-body-md text-on-surface-variant">
-          <a class="block hover:text-primary" href="boutique.html">Catalogue</a>
-          <a class="block hover:text-primary" href="contact.html">Contact</a>
-          <a class="block hover:text-primary" href="https://wa.me/243977565432" target="_blank" rel="noopener">WhatsApp</a>
+      </section>
+
+      <!-- "How to install" Mini-guide -->
+      <section class="bg-surface-container-high py-16 md:py-section-gap">
+        <div
+          class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
+        >
+          <div class="text-center mb-16 fade-in-section">
+            <h2
+              class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4"
+            >
+              Guide d'Installation
+            </h2>
+            <p
+              class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto"
+            >
+              Sublimez votre regard en quelques étapes simples. Pas besoin de
+              styliste, juste d'un miroir et de votre confiance.
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-gutter gap-y-12"
+          >
+            <div class="text-center fade-in-section">
+              <div
+                class="w-16 h-16 bg-background rounded-full flex items-center justify-center mx-auto mb-6 text-primary shadow-sm border border-outline-variant/35"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >content_cut</span
+                >
+              </div>
+              <h4 class="font-label-lg text-label-lg text-primary mb-3">
+                1. SECTIONNER
+              </h4>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant text-sm px-4"
+              >
+                Séparez une mèche horizontale à la base de votre nuque.
+              </p>
+            </div>
+            <div class="text-center fade-in-section">
+              <div
+                class="w-16 h-16 bg-background rounded-full flex items-center justify-center mx-auto mb-6 text-primary shadow-sm border border-outline-variant/35"
+              >
+                <span class="material-symbols-outlined text-3xl">brush</span>
+              </div>
+              <h4 class="font-label-lg text-label-lg text-primary mb-3">
+                2. CRÊPER
+              </h4>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant text-sm px-4"
+              >
+                Brossez légèrement la racine pour une tenue maximale des clips.
+              </p>
+            </div>
+            <div class="text-center fade-in-section">
+              <div
+                class="w-16 h-16 bg-background rounded-full flex items-center justify-center mx-auto mb-6 text-primary shadow-sm border border-outline-variant/35"
+              >
+                <span class="material-symbols-outlined text-3xl">lock</span>
+              </div>
+              <h4 class="font-label-lg text-label-lg text-primary mb-3">
+                3. CLIPSER
+              </h4>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant text-sm px-4"
+              >
+                Ouvrez les clips, insérez et fermez fermement contre la racine.
+              </p>
+            </div>
+            <div class="text-center fade-in-section">
+              <div
+                class="w-16 h-16 bg-background rounded-full flex items-center justify-center mx-auto mb-6 text-primary shadow-sm border border-outline-variant/35"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >auto_awesome</span
+                >
+              </div>
+              <h4 class="font-label-lg text-label-lg text-primary mb-3">
+                4. MÉLANGER
+              </h4>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant text-sm px-4"
+              >
+                Relâchez vos cheveux et brossez l'ensemble pour un fini naturel.
+              </p>
+            </div>
+          </div>
+          <div
+            class="mt-16 md:mt-20 rounded-2xl overflow-hidden relative h-[250px] md:h-[400px] fade-in-section shadow-lg border border-outline-variant/30"
+          >
+            <div
+              class="w-full h-full bg-cover bg-center"
+              style="
+                background-image: url(&quot;assets/images/perruques/perruque-longue-vagues-glam-01.png&quot;);
+              "
+            ></div>
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black/10"
+            >
+              <button
+                class="bg-white/20 backdrop-blur-md p-6 rounded-full text-white hover:scale-110 transition-transform"
+                type="button"
+              >
+                <span
+                  class="material-symbols-outlined text-4xl"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >play_arrow</span
+                >
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div>
-        <h3 class="font-label-lg text-label-lg uppercase text-primary mb-6">Adresse</h3>
-        <p class="font-body-md text-body-md text-on-surface-variant">
-          Place Mulamba, Bukavu, RDC<br>À côté de chez Mama Kinja<br>contact@hm-cabello.cd
+      </section>
+
+      <!-- Call to Action -->
+      <section
+        class="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop text-center max-w-2xl mx-auto fade-in-section"
+      >
+        <h2
+          class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6"
+        >
+          Prête pour votre métamorphose?
+        </h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+          Rejoignez les milliers de femmes qui ont choisi HM CABELLO pour leur
+          routine beauté quotidienne.
         </p>
+        <div
+          class="flex flex-col sm:flex-row justify-center gap-4 px-4 sm:px-0"
+        >
+          <input
+            class="px-6 py-4 rounded-xl border border-outline focus:border-primary outline-none bg-transparent min-w-[260px] text-on-surface placeholder:text-on-surface-variant/40"
+            placeholder="Votre adresse email"
+            type="email"
+          />
+          <button
+            class="bg-primary text-white px-8 py-4 rounded-xl font-label-lg text-label-lg hover:shadow-lg transition-all uppercase tracking-widest text-[12px]"
+            type="button"
+          >
+            S'ABONNER &amp; PROFITER DE -10%
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-surface-container-high dark:bg-surface-container-highest w-full"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-16 md:py-section-gap max-w-container-max mx-auto"
+      >
+        <div class="space-y-5">
+          <div class="font-headline-lg text-headline-lg text-primary">
+            HM CABELLO
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant">
+            L'excellence capillaire au coeur de Bukavu. Perruques, tissages,
+            extensions et clip-ins premium.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-label-lg text-label-lg uppercase text-primary mb-6">
+            Collections
+          </h3>
+          <div
+            class="space-y-3 font-body-md text-body-md text-on-surface-variant"
+          >
+            <a class="block hover:text-primary" href="perruques.html"
+              >Perruques</a
+            >
+            <a class="block hover:text-primary" href="tissages.html"
+              >Tissages</a
+            >
+            <a class="block hover:text-primary" href="clip-ins.html"
+              >Clip-ins</a
+            >
+            <a class="block hover:text-primary" href="bijoux.html">Bijoux</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-label-lg text-label-lg uppercase text-primary mb-6">
+            Boutique
+          </h3>
+          <div
+            class="space-y-3 font-body-md text-body-md text-on-surface-variant"
+          >
+            <a class="block hover:text-primary" href="boutique.html"
+              >Catalogue</a
+            >
+            <a class="block hover:text-primary" href="contact.html">Contact</a>
+            <a
+              class="block hover:text-primary"
+              href="https://wa.me/243977565432"
+              target="_blank"
+              rel="noopener"
+              >WhatsApp</a
+            >
+          </div>
+        </div>
+        <div>
+          <h3 class="font-label-lg text-label-lg uppercase text-primary mb-6">
+            Adresse
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">
+            Place Mulamba, Bukavu, RDC<br />À côté de chez Mama Kinja<br />contact@hm-cabello.cd
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="border-t border-outline-variant/50 px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto font-label-sm text-label-sm text-on-surface-variant">
-      &copy; 2026 HM CABELLO. Place Mulamba, Bukavu. Tous droits réservés.
-    </div>
-  </footer>
+      <div
+        class="border-t border-outline-variant/50 px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto font-label-sm text-label-sm text-on-surface-variant"
+      >
+        &copy; 2026 HM CABELLO. Place Mulamba, Bukavu. Tous droits réservés.
+      </div>
+    </footer>
 
-  <!-- Fixed WhatsApp Button -->
-  <a class="fixed bottom-8 right-8 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-50" href="https://wa.me/243977565432" target="_blank">
-    <svg fill="currentColor" height="32" viewBox="0 0 16 16" width="32" xmlns="http://www.w3.org/2000/svg">
-      <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.585zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
-    </svg>
-  </a>
+    <!-- Fixed WhatsApp Button -->
+    <a
+      class="fixed bottom-8 right-8 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-50"
+      href="https://wa.me/243977565432"
+      target="_blank"
+    >
+      <svg
+        fill="currentColor"
+        height="32"
+        viewBox="0 0 16 16"
+        width="32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.585zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+        ></path>
+      </svg>
+    </a>
 
-  <!-- Script Imports -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Small trigger to make clips visible in scroll reveal
-      setTimeout(() => {
-        document.querySelectorAll('.fade-in-section').forEach(el => {
-          el.classList.add('visible');
-        });
-      }, 200);
-    });
-  </script>
-  <script src="assets/js/products.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
+    <!-- Script Imports -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Small trigger to make clips visible in scroll reveal
+        setTimeout(() => {
+          document.querySelectorAll(".fade-in-section").forEach((el) => {
+            el.classList.add("visible");
+          });
+        }, 200);
+      });
+    </script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

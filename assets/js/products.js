@@ -2,7 +2,7 @@ const PRODUCTS = [
   // --- PERRUQUES (WIGS) ---
   {
     id: "lace-front-kivu-deep",
-    title: "Lace Front \"Kivu Deep\"",
+    title: 'Lace Front "Kivu Deep"',
     price: 350000,
     priceFormatted: "350.000 FC",
     tag: "Best Seller",
@@ -12,11 +12,12 @@ const PRODUCTS = [
     length: 24,
     texture: "deep curly",
     density: "180%",
-    description: "13x6 HD Lace, Densité 180%. Cheveux vierges d'origine brésilienne sélectionnés à la main."
+    description:
+      "13x6 HD Lace, Densité 180%. Cheveux vierges d'origine brésilienne sélectionnés à la main.",
   },
   {
     id: "full-lace-bukavu-silk",
-    title: "Full Lace \"Bukavu Silk\"",
+    title: 'Full Lace "Bukavu Silk"',
     price: 520000,
     priceFormatted: "520.000 FC",
     tag: "Nouveau",
@@ -26,11 +27,12 @@ const PRODUCTS = [
     length: 20,
     texture: "straight",
     density: "200%",
-    description: "Structure intégrale, Densité 200%. Cheveux d'origine péruvienne traités aux huiles naturelles."
+    description:
+      "Structure intégrale, Densité 200%. Cheveux d'origine péruvienne traités aux huiles naturelles.",
   },
   {
     id: "360-wig-sahara-curl",
-    title: "360 Wig \"Sahara Curl\"",
+    title: '360 Wig "Sahara Curl"',
     price: 410000,
     priceFormatted: "410.000 FC",
     tag: "Populaire",
@@ -40,11 +42,12 @@ const PRODUCTS = [
     length: 18,
     texture: "deep curly",
     density: "180%",
-    description: "Lace périphérique 360°, Densité 180%. Boucles définies, texture Kinky Curly authentique."
+    description:
+      "Lace périphérique 360°, Densité 180%. Boucles définies, texture Kinky Curly authentique.",
   },
   {
     id: "bob-luxe-miel",
-    title: "Bob \"Luxe Miel\"",
+    title: 'Bob "Luxe Miel"',
     price: 285000,
     priceFormatted: "285.000 FC",
     tag: "Nouveau",
@@ -54,11 +57,12 @@ const PRODUCTS = [
     length: 12,
     texture: "straight",
     density: "150%",
-    description: "Lace Front 4x4, Densité 150%. Blond miel fondu sur base naturelle, coupe au carré précise."
+    description:
+      "Lace Front 4x4, Densité 150%. Blond miel fondu sur base naturelle, coupe au carré précise.",
   },
   {
     id: "glueless-goma-wave",
-    title: "Glueless \"Goma Wave\"",
+    title: 'Glueless "Goma Wave"',
     price: 395000,
     priceFormatted: "395.000 FC",
     tag: "Glueless",
@@ -68,11 +72,12 @@ const PRODUCTS = [
     length: 26,
     texture: "body wave",
     density: "180%",
-    description: "Système sans colle ajustable, Densité 180%. Texture ondulée \"Body Wave\", prêt à porter."
+    description:
+      'Système sans colle ajustable, Densité 180%. Texture ondulée "Body Wave", prêt à porter.',
   },
   {
     id: "super-long-extase",
-    title: "Super Long \"Extase\"",
+    title: 'Super Long "Extase"',
     price: 680000,
     priceFormatted: "680.000 FC",
     tag: "Luxe",
@@ -82,11 +87,12 @@ const PRODUCTS = [
     length: 30,
     texture: "straight",
     density: "250%",
-    description: "Lace frontale 13x4, Densité 250%. Longueur exceptionnelle, volume maximum pour un look glamour."
+    description:
+      "Lace frontale 13x4, Densité 250%. Longueur exceptionnelle, volume maximum pour un look glamour.",
   },
   {
     id: "perruque-bukavu-glamour",
-    title: "Lace Front \"Bukavu Glamour\"",
+    title: 'Lace Front "Bukavu Glamour"',
     price: 580000,
     priceFormatted: "580.000 FC",
     tag: "Luxe",
@@ -96,11 +102,12 @@ const PRODUCTS = [
     length: 28,
     texture: "body wave",
     density: "200%",
-    description: "Perruque de qualité supérieure, lace front indétectable, cheveux ultra-denses et soyeux."
+    description:
+      "Perruque de qualité supérieure, lace front indétectable, cheveux ultra-denses et soyeux.",
   },
   {
     id: "perruque-kinky-afro-beauty",
-    title: "Glueless \"Afro Beauty\"",
+    title: 'Glueless "Afro Beauty"',
     price: 425000,
     priceFormatted: "425.000 FC",
     tag: "Nouveau",
@@ -110,12 +117,13 @@ const PRODUCTS = [
     length: 16,
     texture: "deep curly",
     density: "180%",
-    description: "Texture Kinky Curly premium, sans colle, confort optimal et look afro naturel volumineux."
+    description:
+      "Texture Kinky Curly premium, sans colle, confort optimal et look afro naturel volumineux.",
   },
 
   {
     id: "perruque-longue-glam-01",
-    title: "Full Lace \"Kivu Glam\"",
+    title: 'Full Lace "Kivu Glam"',
     price: 640000,
     priceFormatted: "640.000 FC",
     tag: "Luxe",
@@ -125,11 +133,12 @@ const PRODUCTS = [
     length: 28,
     texture: "body wave",
     density: "220%",
-    description: "Full Lace ultra-légère, densité 220%. Texture Body Wave soyeuse pour une allure de diva."
+    description:
+      "Full Lace ultra-légère, densité 220%. Texture Body Wave soyeuse pour une allure de diva.",
   },
   {
     id: "perruque-boucles-naturelles-02",
-    title: "360 Wig \"Mulamba Curl\"",
+    title: '360 Wig "Mulamba Curl"',
     price: 480000,
     priceFormatted: "480.000 FC",
     tag: "Nouveau",
@@ -139,11 +148,12 @@ const PRODUCTS = [
     length: 20,
     texture: "deep curly",
     density: "200%",
-    description: "360 Wig en cheveux vierges brésiliens, boucles longues durée hydratées aux huiles naturelles."
+    description:
+      "360 Wig en cheveux vierges brésiliens, boucles longues durée hydratées aux huiles naturelles.",
   },
   {
     id: "perruque-colore-miel-03",
-    title: "Lace Front \"Miel Doré\"",
+    title: 'Lace Front "Miel Doré"',
     price: 390000,
     priceFormatted: "390.000 FC",
     tag: "Populaire",
@@ -153,11 +163,12 @@ const PRODUCTS = [
     length: 22,
     texture: "straight",
     density: "180%",
-    description: "Lace Front 13x4, blond miel naturel sur base noire, ombrée savamment."
+    description:
+      "Lace Front 13x4, blond miel naturel sur base noire, ombrée savamment.",
   },
   {
     id: "perruque-noire-lisse-04",
-    title: "Glueless \"Noir Absolu\"",
+    title: 'Glueless "Noir Absolu"',
     price: 345000,
     priceFormatted: "345.000 FC",
     tag: "Best Seller",
@@ -167,11 +178,12 @@ const PRODUCTS = [
     length: 18,
     texture: "straight",
     density: "180%",
-    description: "Glueless lisse, noire intense, cheveux péruviens vierges, installation sans colle."
+    description:
+      "Glueless lisse, noire intense, cheveux péruviens vierges, installation sans colle.",
   },
   {
     id: "perruque-brun-vagues-05",
-    title: "360 Wig \"Caramel Doux\"",
+    title: '360 Wig "Caramel Doux"',
     price: 420000,
     priceFormatted: "420.000 FC",
     tag: "Nouveau",
@@ -181,11 +193,12 @@ const PRODUCTS = [
     length: 24,
     texture: "body wave",
     density: "180%",
-    description: "360 Wig teinte caramel naturelle, texture ondulée soyeuse, sans shimmer artificiel."
+    description:
+      "360 Wig teinte caramel naturelle, texture ondulée soyeuse, sans shimmer artificiel.",
   },
   {
     id: "perruque-longue-brun-06",
-    title: "Lace Front \"Brune Soleil\"",
+    title: 'Lace Front "Brune Soleil"',
     price: 510000,
     priceFormatted: "510.000 FC",
     tag: "Luxe",
@@ -195,11 +208,12 @@ const PRODUCTS = [
     length: 26,
     texture: "straight",
     density: "200%",
-    description: "Lace Front 13x6 HD, cheveux lissés chocolat lumineux, 26 pouces de volume majestueux."
+    description:
+      "Lace Front 13x6 HD, cheveux lissés chocolat lumineux, 26 pouces de volume majestueux.",
   },
   {
     id: "perruque-afro-kinky-07",
-    title: "Full Lace \"Afro Royale\"",
+    title: 'Full Lace "Afro Royale"',
     price: 455000,
     priceFormatted: "455.000 FC",
     tag: "Nouveau",
@@ -209,11 +223,12 @@ const PRODUCTS = [
     length: 16,
     texture: "deep curly",
     density: "200%",
-    description: "Full lace en texture Kinky Curly dense, ode à la beauté afro, volume spectaculaire."
+    description:
+      "Full lace en texture Kinky Curly dense, ode à la beauté afro, volume spectaculaire.",
   },
   {
     id: "perruque-carre-08",
-    title: "Bob Lace \"Carré Parisien\"",
+    title: 'Bob Lace "Carré Parisien"',
     price: 295000,
     priceFormatted: "295.000 FC",
     tag: "Populaire",
@@ -223,11 +238,12 @@ const PRODUCTS = [
     length: 12,
     texture: "straight",
     density: "150%",
-    description: "Bob carré élégant, coupe précise, lace front 4x4 pour un look épuré et sophistiqué."
+    description:
+      "Bob carré élégant, coupe précise, lace front 4x4 pour un look épuré et sophistiqué.",
   },
   {
     id: "perruque-longue-bouclee-09",
-    title: "Lace Front \"Cascade Dorée\"",
+    title: 'Lace Front "Cascade Dorée"',
     price: 595000,
     priceFormatted: "595.000 FC",
     tag: "Luxe",
@@ -237,11 +253,12 @@ const PRODUCTS = [
     length: 28,
     texture: "deep curly",
     density: "250%",
-    description: "Grande longueur bouclée en or miel, densité 250%, pour les grandes occasions."
+    description:
+      "Grande longueur bouclée en or miel, densité 250%, pour les grandes occasions.",
   },
   {
     id: "perruque-auburn-10",
-    title: "Glueless \"Auburn Flambé\"",
+    title: 'Glueless "Auburn Flambé"',
     price: 375000,
     priceFormatted: "375.000 FC",
     tag: "Nouveau",
@@ -251,11 +268,12 @@ const PRODUCTS = [
     length: 20,
     texture: "body wave",
     density: "180%",
-    description: "Glueless auburn naturel, teinte chaude et envoûtante, ondulation Body Wave subtile."
+    description:
+      "Glueless auburn naturel, teinte chaude et envoûtante, ondulation Body Wave subtile.",
   },
   {
     id: "perruque-extra-volum-11",
-    title: "360 Wig \"Volume Maximal\"",
+    title: '360 Wig "Volume Maximal"',
     price: 490000,
     priceFormatted: "490.000 FC",
     tag: "Best Seller",
@@ -265,11 +283,12 @@ const PRODUCTS = [
     length: 22,
     texture: "deep curly",
     density: "250%",
-    description: "360 Wig ultra-dense, boucles profondes spectaculaires, rendu Hollywood à Bukavu."
+    description:
+      "360 Wig ultra-dense, boucles profondes spectaculaires, rendu Hollywood à Bukavu.",
   },
   {
     id: "perruque-vague-sombre-12",
-    title: "Full Lace \"Nuit Étoilée\"",
+    title: 'Full Lace "Nuit Étoilée"',
     price: 620000,
     priceFormatted: "620.000 FC",
     tag: "Luxe",
@@ -279,11 +298,12 @@ const PRODUCTS = [
     length: 26,
     texture: "body wave",
     density: "220%",
-    description: "Full Lace noire profonde avec reflets bleutés subtils, mouvement de vagues hypnotisant."
+    description:
+      "Full Lace noire profonde avec reflets bleutés subtils, mouvement de vagues hypnotisant.",
   },
   {
     id: "perruque-ombrée-13",
-    title: "Lace Front \"Ombré Sunkissed\"",
+    title: 'Lace Front "Ombré Sunkissed"',
     price: 440000,
     priceFormatted: "440.000 FC",
     tag: "Populaire",
@@ -293,11 +313,12 @@ const PRODUCTS = [
     length: 24,
     texture: "straight",
     density: "180%",
-    description: "Balayage ombré racines naturelles vers pointes blond doré, lace front 13x4 HD."
+    description:
+      "Balayage ombré racines naturelles vers pointes blond doré, lace front 13x4 HD.",
   },
   {
     id: "clip-user-14",
-    title: "Clip-ins \"Délice Ondulé\"",
+    title: 'Clip-ins "Délice Ondulé"',
     price: 175000,
     priceFormatted: "175.000 FC",
     tag: "Populaire",
@@ -306,11 +327,12 @@ const PRODUCTS = [
     subCategory: "Clip-in Extensions",
     length: 22,
     texture: "body wave",
-    description: "Extensions clip-in Body Wave, 8 pièces pour une installation complète et naturelle."
+    description:
+      "Extensions clip-in Body Wave, 8 pièces pour une installation complète et naturelle.",
   },
   {
     id: "clip-user-15",
-    title: "Clip-ins \"Boucles Serrées\"",
+    title: 'Clip-ins "Boucles Serrées"',
     price: 195000,
     priceFormatted: "195.000 FC",
     tag: "Nouveau",
@@ -319,11 +341,12 @@ const PRODUCTS = [
     subCategory: "Clip-in Extensions",
     length: 18,
     texture: "deep curly",
-    description: "Clip-ins Deep Wave 200g, 7 pièces, pour ajouter du volume et des boucles impeccables."
+    description:
+      "Clip-ins Deep Wave 200g, 7 pièces, pour ajouter du volume et des boucles impeccables.",
   },
   {
     id: "clip-user-16",
-    title: "Clip-ins \"Soie & Volume\"",
+    title: 'Clip-ins "Soie & Volume"',
     price: 160000,
     priceFormatted: "160.000 FC",
     tag: "Best Seller",
@@ -332,11 +355,12 @@ const PRODUCTS = [
     subCategory: "Clip-in Extensions",
     length: 20,
     texture: "straight",
-    description: "Clip-ins lisses ultra-soyeux, 180g répartis sur 9 clips, installation rapide."
+    description:
+      "Clip-ins lisses ultra-soyeux, 180g répartis sur 9 clips, installation rapide.",
   },
   {
     id: "clip-user-17",
-    title: "Clip-ins \"Or Liquide\"",
+    title: 'Clip-ins "Or Liquide"',
     price: 210000,
     priceFormatted: "210.000 FC",
     tag: "Luxe",
@@ -345,11 +369,12 @@ const PRODUCTS = [
     subCategory: "Clip-in Extensions",
     length: 24,
     texture: "straight",
-    description: "Clip-ins blond doré premium, effet lumineux naturel, 220g pour un résultat glamour."
+    description:
+      "Clip-ins blond doré premium, effet lumineux naturel, 220g pour un résultat glamour.",
   },
   {
     id: "clip-user-18",
-    title: "Clip-ins \"Caramel Doux\"",
+    title: 'Clip-ins "Caramel Doux"',
     price: 180000,
     priceFormatted: "180.000 FC",
     tag: "Populaire",
@@ -358,11 +383,12 @@ const PRODUCTS = [
     subCategory: "Clip-in Extensions",
     length: 20,
     texture: "body wave",
-    description: "Clip-ins caramel naturel ondulés, couleur chaleur, 190g pour un volume parfait."
+    description:
+      "Clip-ins caramel naturel ondulés, couleur chaleur, 190g pour un volume parfait.",
   },
   {
     id: "tissage-user-19",
-    title: "Bundle Pack \"Chocolat Royal\"",
+    title: 'Bundle Pack "Chocolat Royal"',
     price: 285000,
     priceFormatted: "285.000 FC",
     tag: "Populaire",
@@ -371,11 +397,12 @@ const PRODUCTS = [
     subCategory: "Tissages Vierges",
     length: 22,
     texture: "straight",
-    description: "3 boules en cheveux vierges chocolat profond, lissés à plat et anti-frisottis."
+    description:
+      "3 boules en cheveux vierges chocolat profond, lissés à plat et anti-frisottis.",
   },
   {
     id: "tissage-user-20",
-    title: "Bundle \"Kivu Waves\"",
+    title: 'Bundle "Kivu Waves"',
     price: 310000,
     priceFormatted: "310.000 FC",
     tag: "Nouveau",
@@ -384,11 +411,12 @@ const PRODUCTS = [
     subCategory: "Tissages Vierges",
     length: 24,
     texture: "body wave",
-    description: "Pack 3 boules Kivu Wave ondulées, cuticules intactes, teinture jusqu'au #27 possible."
+    description:
+      "Pack 3 boules Kivu Wave ondulées, cuticules intactes, teinture jusqu'au #27 possible.",
   },
   {
     id: "tissage-user-21",
-    title: "Frontal 13x6 \"Ultra HD\"",
+    title: 'Frontal 13x6 "Ultra HD"',
     price: 110000,
     priceFormatted: "110.000 FC",
     tag: "Lace",
@@ -397,13 +425,14 @@ const PRODUCTS = [
     subCategory: "HD Lace Wigs",
     length: 18,
     texture: "straight",
-    description: "Frontal HD 13x6 invisible toutes carnations, coupe laser pour une installation parfaite."
+    description:
+      "Frontal HD 13x6 invisible toutes carnations, coupe laser pour une installation parfaite.",
   },
 
   // --- TISSAGES (WEAVES) ---
   {
     id: "silky-straight-bundle",
-    title: "Tissage Vierge \"Silky Straight\"",
+    title: 'Tissage Vierge "Silky Straight"',
     price: 115000,
     priceFormatted: "115.000 FC",
     tag: "Best Seller",
@@ -412,11 +441,12 @@ const PRODUCTS = [
     subCategory: "Tissages Vierges",
     length: 18,
     texture: "straight",
-    description: "Une fluidité absolue, sans frisottis. Idéal pour un look sophistiqué et lisse."
+    description:
+      "Une fluidité absolue, sans frisottis. Idéal pour un look sophistiqué et lisse.",
   },
   {
     id: "body-wave-bundle",
-    title: "Tissage Vierge \"Body Wave\"",
+    title: 'Tissage Vierge "Body Wave"',
     price: 125000,
     priceFormatted: "125.000 FC",
     tag: "Premium",
@@ -425,11 +455,12 @@ const PRODUCTS = [
     subCategory: "Tissages Vierges",
     length: 22,
     texture: "body wave",
-    description: "Des ondulations voluptueuses pour un volume naturel et glamour à Bukavu."
+    description:
+      "Des ondulations voluptueuses pour un volume naturel et glamour à Bukavu.",
   },
   {
     id: "deep-wave-bundle",
-    title: "Tissage Vierge \"Deep Wave\"",
+    title: 'Tissage Vierge "Deep Wave"',
     price: 135000,
     priceFormatted: "135.000 FC",
     tag: "Populaire",
@@ -438,7 +469,8 @@ const PRODUCTS = [
     subCategory: "Tissages Vierges",
     length: 20,
     texture: "deep curly",
-    description: "Boucles serrées et définies pour un style audacieux, texturé et hydraté."
+    description:
+      "Boucles serrées et définies pour un style audacieux, texturé et hydraté.",
   },
   {
     id: "frontal-13x4-hd",
@@ -451,7 +483,8 @@ const PRODUCTS = [
     subCategory: "HD Lace Wigs",
     length: 16,
     texture: "straight",
-    description: "Lace HD ultra-fine, invisible sur toutes les carnations. Idéal pour fermer votre tissage."
+    description:
+      "Lace HD ultra-fine, invisible sur toutes les carnations. Idéal pour fermer votre tissage.",
   },
   {
     id: "closure-4x4-suisse",
@@ -464,11 +497,12 @@ const PRODUCTS = [
     subCategory: "HD Lace Wigs",
     length: 14,
     texture: "straight",
-    description: "Closure classique en dentelle suisse, raie libre, finition ultra-naturelle."
+    description:
+      "Closure classique en dentelle suisse, raie libre, finition ultra-naturelle.",
   },
   {
     id: "tissage-royal-mulamba-curly",
-    title: "Pack Royal \"Mulamba Curly\"",
+    title: 'Pack Royal "Mulamba Curly"',
     price: 320000,
     priceFormatted: "320.000 FC",
     tag: "Populaire",
@@ -477,7 +511,8 @@ const PRODUCTS = [
     subCategory: "Tissages Vierges",
     length: 24,
     texture: "deep curly",
-    description: "Pack de mèches denses et volumineuses pour un effet bouclé spectacieux et durable."
+    description:
+      "Pack de mèches denses et volumineuses pour un effet bouclé spectacieux et durable.",
   },
 
   // --- CLIP-INS ---
@@ -492,7 +527,8 @@ const PRODUCTS = [
     subCategory: "Clip-in Extensions",
     length: 22,
     texture: "straight",
-    description: "180g de mèches lisses avec clips sécurisés. Longueur instantanée en 10 minutes."
+    description:
+      "180g de mèches lisses avec clips sécurisés. Longueur instantanée en 10 minutes.",
   },
   {
     id: "kinky-curly-clipins",
@@ -505,7 +541,8 @@ const PRODUCTS = [
     subCategory: "Clip-in Extensions",
     length: 18,
     texture: "deep curly",
-    description: "200g de texture Kinky Curly premium, idéal pour s'intégrer aux cheveux crépus/bouclés."
+    description:
+      "200g de texture Kinky Curly premium, idéal pour s'intégrer aux cheveux crépus/bouclés.",
   },
   {
     id: "deep-wave-clipins",
@@ -518,20 +555,23 @@ const PRODUCTS = [
     subCategory: "Clip-in Extensions",
     length: 20,
     texture: "deep curly",
-    description: "150g de mèches ondulées et définies. Volume et texture instantanés."
+    description:
+      "150g de mèches ondulées et définies. Volume et texture instantanés.",
   },
   {
     id: "clipins-premium-kivu-wave",
-    title: "Clip-ins Premium \"Kivu Wave\"",
+    title: 'Clip-ins Premium "Kivu Wave"',
     price: 190000,
     priceFormatted: "190.000 FC",
     tag: "Luxe",
-    image: "assets/images/added_images/468ff1d8-48d9-4a87-ac01-402a1ef170c4.jpg",
+    image:
+      "assets/images/added_images/468ff1d8-48d9-4a87-ac01-402a1ef170c4.jpg",
     category: "clip",
     subCategory: "Clip-in Extensions",
     length: 24,
     texture: "body wave",
-    description: "Clip-ins ondulés Body Wave haut de gamme, épaisseur maximale des racines aux pointes."
+    description:
+      "Clip-ins ondulés Body Wave haut de gamme, épaisseur maximale des racines aux pointes.",
   },
 
   // --- BIJOUX (JEWELRY) ---
@@ -544,7 +584,8 @@ const PRODUCTS = [
     image: "assets/images/bijoux/collier_or_luxe.png",
     category: "bijoux",
     subCategory: "Colliers",
-    description: "Collier en chaîne mailles gourmette fine en or 18 carats. Une touche de raffinement intemporel."
+    description:
+      "Collier en chaîne mailles gourmette fine en or 18 carats. Une touche de raffinement intemporel.",
   },
   {
     id: "boucles-perles-imperiales",
@@ -555,7 +596,8 @@ const PRODUCTS = [
     image: "assets/images/bijoux/boucles_perles.png",
     category: "bijoux",
     subCategory: "Boucles d'Oreilles",
-    description: "Boucles d'oreilles pendantes ornées de perles de culture impériales et monture en or."
+    description:
+      "Boucles d'oreilles pendantes ornées de perles de culture impériales et monture en or.",
   },
   {
     id: "bracelet-or-fin-gourmet",
@@ -566,7 +608,8 @@ const PRODUCTS = [
     image: "assets/images/bijoux/bracelet_or_luxe.png",
     category: "bijoux",
     subCategory: "Bracelets",
-    description: "Bracelet délicat en or 18 carats, mailles gourmettes fines pour sublimer votre poignet."
+    description:
+      "Bracelet délicat en or 18 carats, mailles gourmettes fines pour sublimer votre poignet.",
   },
   {
     id: "bague-emeraude-mulamba",
@@ -577,7 +620,8 @@ const PRODUCTS = [
     image: "assets/images/bijoux/bague_diamant.png",
     category: "bijoux",
     subCategory: "Bagues",
-    description: "Bague en or blanc sertie d'une émeraude centrale étincelante entourée de diamants fins."
+    description:
+      "Bague en or blanc sertie d'une émeraude centrale étincelante entourée de diamants fins.",
   },
   {
     id: "collier-ras-cou-cristal",
@@ -588,7 +632,8 @@ const PRODUCTS = [
     image: "assets/images/bijoux/pendentif_emeraude.png",
     category: "bijoux",
     subCategory: "Colliers",
-    description: "Collier fin en or arborant un magnifique pendentif émeraude taillé en goutte d'eau."
+    description:
+      "Collier fin en or arborant un magnifique pendentif émeraude taillé en goutte d'eau.",
   },
   {
     id: "boucles-creoles-or",
@@ -599,8 +644,9 @@ const PRODUCTS = [
     image: "assets/images/bijoux/creoles_or.png",
     category: "bijoux",
     subCategory: "Boucles d'Oreilles",
-    description: "Créoles épaisses classiques et intemporelles plaquées or 18 carats pour un éclat quotidien."
-  }
+    description:
+      "Créoles épaisses classiques et intemporelles plaquées or 18 carats pour un éclat quotidien.",
+  },
 ];
 
 if (typeof module !== "undefined" && module.exports) {

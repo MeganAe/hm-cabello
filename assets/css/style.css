@@ -86,7 +86,9 @@
   position: fixed;
   top: 50%;
   transform: translate(-50%, -48%) scale(0.98);
-  transition: opacity 180ms ease, transform 180ms ease;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
   width: min(92vw, 760px);
   z-index: 90;
 }
@@ -111,7 +113,9 @@
   pointer-events: none;
   position: fixed;
   transform: translate(-50%, 18px);
-  transition: opacity 180ms ease, transform 180ms ease;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
   z-index: 100;
 }
 

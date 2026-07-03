@@ -1,399 +1,816 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="light" lang="fr">
-<head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Tissages de Luxe - HM CABELLO</title>
-  <meta name="description" content="HM CABELLO, boutique de perruques, tissages, extensions et clip-ins à Bukavu, RDC.">
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          "colors": {
-            "background": "#fff8f7",
-            "primary-fixed-dim": "#ffb1c1",
-            "on-tertiary-container": "#70a77b",
-            "tertiary-fixed-dim": "#9cd4a5",
-            "on-surface": "#211a1b",
-            "on-primary-fixed": "#3e0218",
-            "inverse-surface": "#372e30",
-            "on-primary-container": "#da8095",
-            "surface-container-high": "#f4e5e6",
-            "on-secondary-container": "#745c00",
-            "surface-dim": "#e5d7d8",
-            "surface-container-lowest": "#ffffff",
-            "secondary-container": "#fed65b",
-            "outline-variant": "#d8c1c4",
-            "tertiary-container": "#003b1a",
-            "on-secondary": "#ffffff",
-            "inverse-primary": "#ffb1c1",
-            "surface-container-highest": "#eedfe0",
-            "on-secondary-fixed": "#241a00",
-            "on-error": "#ffffff",
-            "on-secondary-fixed-variant": "#574500",
-            "on-primary": "#ffffff",
-            "on-surface-variant": "#534345",
-            "secondary": "#735c00",
-            "secondary-fixed-dim": "#e9c349",
-            "error": "#ba1a1a",
-            "surface-container-low": "#fff0f1",
-            "surface": "#fff8f7",
-            "on-tertiary-fixed-variant": "#1c502d",
-            "surface-bright": "#fff8f7",
-            "on-tertiary-fixed": "#00210c",
-            "on-error-container": "#93000a",
-            "tertiary-fixed": "#b7f0c0",
-            "secondary-fixed": "#ffe088",
-            "on-background": "#211a1b",
-            "error-container": "#ffdad6",
-            "primary": "#400419",
-            "surface-tint": "#934659",
-            "tertiary": "#00230d",
-            "primary-container": "#5c1a2e",
-            "outline": "#867275",
-            "on-tertiary": "#ffffff",
-            "inverse-on-surface": "#fcedee",
-            "surface-variant": "#eedfe0",
-            "surface-container": "#faeaec",
-            "primary-fixed": "#ffd9df",
-            "on-primary-fixed-variant": "#762e42"
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tissages de Luxe - HM CABELLO</title>
+    <meta
+      name="description"
+      content="HM CABELLO, boutique de perruques, tissages, extensions et clip-ins à Bukavu, RDC."
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              background: "#fff8f7",
+              "primary-fixed-dim": "#ffb1c1",
+              "on-tertiary-container": "#70a77b",
+              "tertiary-fixed-dim": "#9cd4a5",
+              "on-surface": "#211a1b",
+              "on-primary-fixed": "#3e0218",
+              "inverse-surface": "#372e30",
+              "on-primary-container": "#da8095",
+              "surface-container-high": "#f4e5e6",
+              "on-secondary-container": "#745c00",
+              "surface-dim": "#e5d7d8",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#fed65b",
+              "outline-variant": "#d8c1c4",
+              "tertiary-container": "#003b1a",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#ffb1c1",
+              "surface-container-highest": "#eedfe0",
+              "on-secondary-fixed": "#241a00",
+              "on-error": "#ffffff",
+              "on-secondary-fixed-variant": "#574500",
+              "on-primary": "#ffffff",
+              "on-surface-variant": "#534345",
+              secondary: "#735c00",
+              "secondary-fixed-dim": "#e9c349",
+              error: "#ba1a1a",
+              "surface-container-low": "#fff0f1",
+              surface: "#fff8f7",
+              "on-tertiary-fixed-variant": "#1c502d",
+              "surface-bright": "#fff8f7",
+              "on-tertiary-fixed": "#00210c",
+              "on-error-container": "#93000a",
+              "tertiary-fixed": "#b7f0c0",
+              "secondary-fixed": "#ffe088",
+              "on-background": "#211a1b",
+              "error-container": "#ffdad6",
+              primary: "#400419",
+              "surface-tint": "#934659",
+              tertiary: "#00230d",
+              "primary-container": "#5c1a2e",
+              outline: "#867275",
+              "on-tertiary": "#ffffff",
+              "inverse-on-surface": "#fcedee",
+              "surface-variant": "#eedfe0",
+              "surface-container": "#faeaec",
+              "primary-fixed": "#ffd9df",
+              "on-primary-fixed-variant": "#762e42",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "margin-mobile": "20px",
+              gutter: "24px",
+              "container-max": "1280px",
+              unit: "8px",
+              "section-gap": "120px",
+              "margin-desktop": "64px",
+            },
+            fontFamily: {
+              "headline-lg": ["Playfair Display"],
+              "label-lg": ["Inter"],
+              "headline-md": ["Playfair Display"],
+              "label-sm": ["Inter"],
+              "display-lg": ["Playfair Display"],
+              "body-md": ["Inter"],
+              "headline-lg-mobile": ["Playfair Display"],
+              "display-lg-mobile": ["Playfair Display"],
+              "body-lg": ["Inter"],
+            },
+            fontSize: {
+              "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "400" }],
+              "label-lg": [
+                "14px",
+                { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "600" },
+              ],
+              "headline-md": ["32px", { lineHeight: "1.4", fontWeight: "400" }],
+              "label-sm": [
+                "12px",
+                { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "500" },
+              ],
+              "display-lg": [
+                "64px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+              "headline-lg-mobile": [
+                "32px",
+                { lineHeight: "1.3", fontWeight: "400" },
+              ],
+              "display-lg-mobile": [
+                "40px",
+                { lineHeight: "1.2", fontWeight: "700" },
+              ],
+              "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+            },
           },
-          "borderRadius": {
-            "DEFAULT": "0.125rem",
-            "lg": "0.25rem",
-            "xl": "0.5rem",
-            "full": "0.75rem"
-          },
-          "spacing": {
-            "margin-mobile": "20px",
-            "gutter": "24px",
-            "container-max": "1280px",
-            "unit": "8px",
-            "section-gap": "120px",
-            "margin-desktop": "64px"
-          },
-          "fontFamily": {
-            "headline-lg": ["Playfair Display"],
-            "label-lg": ["Inter"],
-            "headline-md": ["Playfair Display"],
-            "label-sm": ["Inter"],
-            "display-lg": ["Playfair Display"],
-            "body-md": ["Inter"],
-            "headline-lg-mobile": ["Playfair Display"],
-            "display-lg-mobile": ["Playfair Display"],
-            "body-lg": ["Inter"]
-          },
-          "fontSize": {
-            "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
-            "label-lg": ["14px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
-            "headline-md": ["32px", {"lineHeight": "1.4", "fontWeight": "400"}],
-            "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
-            "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-            "headline-lg-mobile": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
-            "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
-            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
-          }
         },
-      },
-    }
-  </script>
-  <style>
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-      font-size: 20px;
-    }
-    .text-gold { color: #fed65b; }
-    .product-card:hover .product-image { transform: scale(1.05); }
-    .nav-underline { position: relative; }
-    .nav-underline::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 1px;
-      bottom: -4px;
-      left: 50%;
-      background-color: #400419;
-      transition: all 0.3s ease;
-      transform: translateX(-50%);
-    }
-    .nav-underline:hover::after { width: 100%; }
-  </style>
-  <link rel="stylesheet" href="assets/css/style.css?v=3">
-</head>
-<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
-  
-  <!-- Header -->
-  <header class="fixed full-width top-0 z-50 bg-background/80 backdrop-blur-md w-full">
-    <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto h-20">
-      <a class="font-headline-md text-headline-md font-normal text-primary tracking-widest uppercase" href="index.html">
-        <img class="h-10 w-auto" src="assets/images/logo/hm-cabello-wordmark.svg" alt="HM CABELLO" />
-      </a>
-      <div class="hidden md:flex items-center space-x-10">
-        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline" href="index.html">Accueil</a>
-        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline" href="boutique.html">Boutique</a>
-        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline" href="perruques.html">Perruques</a>
-        <a class="font-label-lg text-label-lg text-primary border-b-2 border-primary pb-1 transition-all" href="tissages.html">Tissages</a>
-        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline" href="clip-ins.html">Clip-ins</a>
-        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline" href="bijoux.html">Bijoux</a>
-        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline" href="contact.html">Contact</a>
-      </div>
-      <div class="flex items-center space-x-6">
-        <button class="text-on-surface-variant hover:text-primary transition-colors active:scale-95 duration-200" type="button" data-action="search" aria-label="Rechercher">
-          <span class="material-symbols-outlined" data-icon="search">search</span>
-        </button>
-        <button class="text-on-surface-variant hover:text-primary transition-colors active:scale-95 duration-200" type="button" data-action="account" aria-label="Compte client">
-          <span class="material-symbols-outlined" data-icon="person">person</span>
-        </button>
-        <button class="text-on-surface-variant hover:text-primary transition-colors active:scale-95 duration-200 relative" type="button" data-action="cart" aria-label="Panier">
-          <span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
-          <span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center" data-cart-count>0</span>
-        </button>
-        <button class="md:hidden text-on-surface-variant hover:text-primary transition-colors active:scale-95 duration-200" type="button" data-mobile-toggle aria-label="Ouvrir le menu" aria-expanded="false">
-          <span class="material-symbols-outlined" data-mobile-icon>menu</span>
-        </button>
-      </div>
-    </nav>
-    <div class="hm-mobile-panel md:hidden bg-background border-t border-outline-variant/40 px-margin-mobile py-4" data-mobile-panel>
-      <a class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3" href="index.html">Accueil</a>
-      <a class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3" href="boutique.html">Boutique</a>
-      <a class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3" href="perruques.html">Perruques</a>
-      <a class="block font-label-lg text-label-lg text-primary py-3" href="tissages.html">Tissages</a>
-      <a class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3" href="clip-ins.html">Clip-ins</a>
-      <a class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3" href="bijoux.html">Bijoux</a>
-      <a class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3" href="contact.html">Contact</a>
-    </div>
-  </header>
-
-  <main class="pt-24">
-    <!-- Hero Section: Raw Hair Quality -->
-    <section class="relative min-h-[60vh] md:min-h-[819px] flex items-center overflow-hidden">
-      <div class="absolute inset-0 z-0">
-        <div class="w-full h-full bg-cover bg-center opacity-90" style="background-image: url('assets/images/perruques/perruque-longue-body-wave-01.png')"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
-      </div>
-      <div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
-        <div class="max-w-2xl">
-          <span class="font-label-lg text-label-lg text-secondary mb-4 block tracking-[0.2em] uppercase">Collection Signature</span>
-          <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight">L'Excellence du <br/>Raw Hair</h1>
-          <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">
-            Nos tissages sont sourcés avec une rigueur absolue. 100% Raw Hair vierge, sans aucun traitement chimique, préservant la cuticule intacte pour une brillance naturelle et une longévité dépassant 3 ans.
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <button class="bg-primary text-white px-10 py-4 rounded-lg font-label-lg text-label-lg hover:opacity-90 transition-all uppercase tracking-widest text-[12px]">Découvrir les Textures</button>
-            <button class="border border-primary text-primary px-10 py-4 rounded-lg font-label-lg text-label-lg hover:bg-primary/5 transition-all uppercase tracking-widest text-[12px]">Nos Engagements</button>
-          </div>
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 300,
+          "GRAD" 0,
+          "opsz" 24;
+        font-size: 20px;
+      }
+      .text-gold {
+        color: #fed65b;
+      }
+      .product-card:hover .product-image {
+        transform: scale(1.05);
+      }
+      .nav-underline {
+        position: relative;
+      }
+      .nav-underline::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -4px;
+        left: 50%;
+        background-color: #400419;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+      .nav-underline:hover::after {
+        width: 100%;
+      }
+    </style>
+    <link rel="stylesheet" href="assets/css/style.css?v=3" />
+  </head>
+  <body
+    class="bg-background text-on-background font-body-md antialiased overflow-x-hidden"
+  >
+    <!-- Header -->
+    <header
+      class="fixed full-width top-0 z-50 bg-background/80 backdrop-blur-md w-full"
+    >
+      <nav
+        class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto h-20"
+      >
+        <a
+          class="font-headline-md text-headline-md font-normal text-primary tracking-widest uppercase"
+          href="index.html"
+        >
+          <img
+            class="h-10 w-auto"
+            src="assets/images/logo/hm-cabello-wordmark.svg"
+            alt="HM CABELLO"
+          />
+        </a>
+        <div class="hidden md:flex items-center space-x-10">
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline"
+            href="index.html"
+            >Accueil</a
+          >
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline"
+            href="boutique.html"
+            >Boutique</a
+          >
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline"
+            href="perruques.html"
+            >Perruques</a
+          >
+          <a
+            class="font-label-lg text-label-lg text-primary border-b-2 border-primary pb-1 transition-all"
+            href="tissages.html"
+            >Tissages</a
+          >
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline"
+            href="clip-ins.html"
+            >Clip-ins</a
+          >
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline"
+            href="bijoux.html"
+            >Bijoux</a
+          >
+          <a
+            class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors relative nav-underline"
+            href="contact.html"
+            >Contact</a
+          >
         </div>
+        <div class="flex items-center space-x-6">
+          <button
+            class="text-on-surface-variant hover:text-primary transition-colors active:scale-95 duration-200"
+            type="button"
+            data-action="search"
+            aria-label="Rechercher"
+          >
+            <span class="material-symbols-outlined" data-icon="search"
+              >search</span
+            >
+          </button>
+          <button
+            class="text-on-surface-variant hover:text-primary transition-colors active:scale-95 duration-200"
+            type="button"
+            data-action="account"
+            aria-label="Compte client"
+          >
+            <span class="material-symbols-outlined" data-icon="person"
+              >person</span
+            >
+          </button>
+          <button
+            class="text-on-surface-variant hover:text-primary transition-colors active:scale-95 duration-200 relative"
+            type="button"
+            data-action="cart"
+            aria-label="Panier"
+          >
+            <span class="material-symbols-outlined" data-icon="shopping_bag"
+              >shopping_bag</span
+            >
+            <span
+              class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center"
+              data-cart-count
+              >0</span
+            >
+          </button>
+          <button
+            class="md:hidden text-on-surface-variant hover:text-primary transition-colors active:scale-95 duration-200"
+            type="button"
+            data-mobile-toggle
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+          >
+            <span class="material-symbols-outlined" data-mobile-icon>menu</span>
+          </button>
+        </div>
+      </nav>
+      <div
+        class="hm-mobile-panel md:hidden bg-background border-t border-outline-variant/40 px-margin-mobile py-4"
+        data-mobile-panel
+      >
+        <a
+          class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3"
+          href="index.html"
+          >Accueil</a
+        >
+        <a
+          class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3"
+          href="boutique.html"
+          >Boutique</a
+        >
+        <a
+          class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3"
+          href="perruques.html"
+          >Perruques</a
+        >
+        <a
+          class="block font-label-lg text-label-lg text-primary py-3"
+          href="tissages.html"
+          >Tissages</a
+        >
+        <a
+          class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3"
+          href="clip-ins.html"
+          >Clip-ins</a
+        >
+        <a
+          class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3"
+          href="bijoux.html"
+          >Bijoux</a
+        >
+        <a
+          class="block font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-3"
+          href="contact.html"
+          >Contact</a
+        >
       </div>
-    </section>
+    </header>
 
-    <!-- Texture Grid Section -->
-    <section class="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Nos Textures Iconiques</h2>
-        <div class="w-24 h-[1px] bg-primary/20 mx-auto"></div>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-        <!-- Texture 1: Silky Straight -->
-        <div class="group cursor-pointer bg-white p-6 border border-outline-variant/15 rounded-2xl shadow-sm hover:shadow-md transition-all">
-          <div class="relative overflow-hidden mb-6 aspect-[4/5] bg-surface-container rounded-xl">
-            <img class="product-image object-cover w-full h-full transition-transform duration-700 hover:scale-105" src="assets/images/tissages/tissage-meches-miel-01.png" alt="Silky Straight" />
-            <div class="absolute top-4 left-4">
-              <span class="bg-background/95 backdrop-blur px-3 py-1 text-[10px] font-bold tracking-widest text-primary uppercase rounded-full">Best Seller</span>
+    <main class="pt-24">
+      <!-- Hero Section: Raw Hair Quality -->
+      <section
+        class="relative min-h-[60vh] md:min-h-[819px] flex items-center overflow-hidden"
+      >
+        <div class="absolute inset-0 z-0">
+          <div
+            class="w-full h-full bg-cover bg-center opacity-90"
+            style="
+              background-image: url(&quot;assets/images/perruques/perruque-longue-body-wave-01.png&quot;);
+            "
+          ></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"
+          ></div>
+        </div>
+        <div
+          class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full"
+        >
+          <div class="max-w-2xl">
+            <span
+              class="font-label-lg text-label-lg text-secondary mb-4 block tracking-[0.2em] uppercase"
+              >Collection Signature</span
+            >
+            <h1
+              class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight"
+            >
+              L'Excellence du <br />Raw Hair
+            </h1>
+            <p
+              class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed"
+            >
+              Nos tissages sont sourcés avec une rigueur absolue. 100% Raw Hair
+              vierge, sans aucun traitement chimique, préservant la cuticule
+              intacte pour une brillance naturelle et une longévité dépassant 3
+              ans.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <button
+                class="bg-primary text-white px-10 py-4 rounded-lg font-label-lg text-label-lg hover:opacity-90 transition-all uppercase tracking-widest text-[12px]"
+              >
+                Découvrir les Textures
+              </button>
+              <button
+                class="border border-primary text-primary px-10 py-4 rounded-lg font-label-lg text-label-lg hover:bg-primary/5 transition-all uppercase tracking-widest text-[12px]"
+              >
+                Nos Engagements
+              </button>
             </div>
           </div>
-          <h3 class="font-headline-md text-headline-md text-primary mb-2">Silky Straight</h3>
-          <p class="font-body-md text-body-md text-on-surface-variant mb-4">Une fluidité absolue, sans frisottis. Idéal pour un look sophistiqué.</p>
-          <div class="flex items-baseline justify-between pt-2 border-t border-outline-variant/20">
-            <span class="text-label-sm text-on-surface-variant">À partir de</span>
-            <span class="font-label-lg text-label-lg text-primary font-bold text-lg">115.000 FC</span>
-          </div>
         </div>
-        <!-- Texture 2: Body Wave -->
-        <div class="group cursor-pointer bg-white p-6 border border-outline-variant/15 rounded-2xl shadow-sm hover:shadow-md transition-all">
-          <div class="relative overflow-hidden mb-6 aspect-[4/5] bg-surface-container rounded-xl">
-            <img class="product-image object-cover w-full h-full transition-transform duration-700 hover:scale-105" src="assets/images/tissages/tissage-lisse-bundles-01.png" alt="Body Wave" />
-            <div class="absolute top-4 left-4">
-              <span class="bg-background/95 backdrop-blur px-3 py-1 text-[10px] font-bold tracking-widest text-primary uppercase rounded-full">Premium</span>
-            </div>
-          </div>
-          <h3 class="font-headline-md text-headline-md text-primary mb-2">Body Wave</h3>
-          <p class="font-body-md text-body-md text-on-surface-variant mb-4">Des ondulations voluptueuses pour un volume naturel et glamour.</p>
-          <div class="flex items-baseline justify-between pt-2 border-t border-outline-variant/20">
-            <span class="text-label-sm text-on-surface-variant">À partir de</span>
-            <span class="font-label-lg text-label-lg text-primary font-bold text-lg">125.000 FC</span>
-          </div>
-        </div>
-        <!-- Texture 3: Deep Wave -->
-        <div class="group cursor-pointer bg-white p-6 border border-outline-variant/15 rounded-2xl shadow-sm hover:shadow-md transition-all">
-          <div class="relative overflow-hidden mb-6 aspect-[4/5] bg-surface-container rounded-xl">
-            <img class="product-image object-cover w-full h-full transition-transform duration-700 hover:scale-105" src="assets/images/tissages/tissage-body-wave-marron-01.png" alt="Deep Wave" />
-          </div>
-          <h3 class="font-headline-md text-headline-md text-primary mb-2">Deep Wave</h3>
-          <p class="font-body-md text-body-md text-on-surface-variant mb-4">Boucles serrées et définies pour un style audacieux et texturé.</p>
-          <div class="flex items-baseline justify-between pt-2 border-t border-outline-variant/20">
-            <span class="text-label-sm text-on-surface-variant">À partir de</span>
-            <span class="font-label-lg text-label-lg text-primary font-bold text-lg">135.000 FC</span>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Bundle Deals: Bento-ish Layout -->
-    <section class="bg-surface-container-low py-16 md:py-section-gap">
-      <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 text-center md:text-left">
-          <div>
-            <span class="font-label-lg text-label-lg text-secondary mb-2 block tracking-widest">OFFRES EXCLUSIVES</span>
-            <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Les Bundle Deals</h2>
-          </div>
-          <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Économisez sur votre installation complète avec nos packs de 3 ou 4 boules plus une closure assortie.</p>
+      <!-- Texture Grid Section -->
+      <section
+        class="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div class="text-center mb-16">
+          <h2
+            class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4"
+          >
+            Nos Textures Iconiques
+          </h2>
+          <div class="w-24 h-[1px] bg-primary/20 mx-auto"></div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-          <!-- 3 Bundles Deal -->
-          <div class="md:col-span-7 bg-background p-8 md:p-10 flex flex-col md:flex-row gap-10 items-center transition-all border border-outline-variant/20 rounded-2xl shadow-sm hover:shadow-md">
-            <div class="w-full md:w-1/2 aspect-square rounded-xl overflow-hidden shadow-sm">
-              <img class="w-full h-full object-cover" src="assets/images/tissages/tissage-body-wave-dos-01.jpg" alt="Pack Essential" />
-            </div>
-            <div class="w-full md:w-1/2">
-              <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase mb-4 inline-block tracking-wider">Offre Populaire</span>
-              <h3 class="font-headline-md text-headline-md text-primary mb-4">Pack Essential</h3>
-              <ul class="space-y-3 mb-8 text-[14px]">
-                <li class="flex items-center gap-2 text-on-surface-variant">
-                  <span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
-                  3 Bundles (10" - 24")
-                </li>
-                <li class="flex items-center gap-2 text-on-surface-variant">
-                  <span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
-                  1 Closure 4x4 assortie
-                </li>
-                <li class="flex items-center gap-2 text-on-surface-variant">
-                  <span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
-                  Lace Suisse invisible
-                </li>
-              </ul>
-              <div class="mb-8">
-                <p class="text-on-surface-variant/60 line-through text-sm">385.000 FC</p>
-                <p class="font-label-lg text-display-lg-mobile text-primary font-bold">345.000 FC</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+          <!-- Texture 1: Silky Straight -->
+          <div
+            class="group cursor-pointer bg-white p-6 border border-outline-variant/15 rounded-2xl shadow-sm hover:shadow-md transition-all"
+          >
+            <div
+              class="relative overflow-hidden mb-6 aspect-[4/5] bg-surface-container rounded-xl"
+            >
+              <img
+                class="product-image object-cover w-full h-full transition-transform duration-700 hover:scale-105"
+                src="assets/images/tissages/tissage-meches-miel-01.png"
+                alt="Silky Straight"
+              />
+              <div class="absolute top-4 left-4">
+                <span
+                  class="bg-background/95 backdrop-blur px-3 py-1 text-[10px] font-bold tracking-widest text-primary uppercase rounded-full"
+                  >Best Seller</span
+                >
               </div>
-              <button class="w-full border border-primary text-primary py-3 rounded-lg font-label-lg text-label-lg hover:bg-primary hover:text-white transition-all uppercase tracking-widest text-[11px]" type="button">Personnaliser mon pack</button>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-2">
+              Silky Straight
+            </h3>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+              Une fluidité absolue, sans frisottis. Idéal pour un look
+              sophistiqué.
+            </p>
+            <div
+              class="flex items-baseline justify-between pt-2 border-t border-outline-variant/20"
+            >
+              <span class="text-label-sm text-on-surface-variant"
+                >À partir de</span
+              >
+              <span
+                class="font-label-lg text-label-lg text-primary font-bold text-lg"
+                >115.000 FC</span
+              >
             </div>
           </div>
-          <!-- 4 Bundles Deal -->
-          <div class="md:col-span-5 bg-primary p-8 md:p-10 text-white flex flex-col justify-between rounded-2xl shadow-sm hover:shadow-md">
+          <!-- Texture 2: Body Wave -->
+          <div
+            class="group cursor-pointer bg-white p-6 border border-outline-variant/15 rounded-2xl shadow-sm hover:shadow-md transition-all"
+          >
+            <div
+              class="relative overflow-hidden mb-6 aspect-[4/5] bg-surface-container rounded-xl"
+            >
+              <img
+                class="product-image object-cover w-full h-full transition-transform duration-700 hover:scale-105"
+                src="assets/images/tissages/tissage-lisse-bundles-01.png"
+                alt="Body Wave"
+              />
+              <div class="absolute top-4 left-4">
+                <span
+                  class="bg-background/95 backdrop-blur px-3 py-1 text-[10px] font-bold tracking-widest text-primary uppercase rounded-full"
+                  >Premium</span
+                >
+              </div>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-2">
+              Body Wave
+            </h3>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+              Des ondulations voluptueuses pour un volume naturel et glamour.
+            </p>
+            <div
+              class="flex items-baseline justify-between pt-2 border-t border-outline-variant/20"
+            >
+              <span class="text-label-sm text-on-surface-variant"
+                >À partir de</span
+              >
+              <span
+                class="font-label-lg text-label-lg text-primary font-bold text-lg"
+                >125.000 FC</span
+              >
+            </div>
+          </div>
+          <!-- Texture 3: Deep Wave -->
+          <div
+            class="group cursor-pointer bg-white p-6 border border-outline-variant/15 rounded-2xl shadow-sm hover:shadow-md transition-all"
+          >
+            <div
+              class="relative overflow-hidden mb-6 aspect-[4/5] bg-surface-container rounded-xl"
+            >
+              <img
+                class="product-image object-cover w-full h-full transition-transform duration-700 hover:scale-105"
+                src="assets/images/tissages/tissage-body-wave-marron-01.png"
+                alt="Deep Wave"
+              />
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-2">
+              Deep Wave
+            </h3>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+              Boucles serrées et définies pour un style audacieux et texturé.
+            </p>
+            <div
+              class="flex items-baseline justify-between pt-2 border-t border-outline-variant/20"
+            >
+              <span class="text-label-sm text-on-surface-variant"
+                >À partir de</span
+              >
+              <span
+                class="font-label-lg text-label-lg text-primary font-bold text-lg"
+                >135.000 FC</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bundle Deals: Bento-ish Layout -->
+      <section class="bg-surface-container-low py-16 md:py-section-gap">
+        <div
+          class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
+        >
+          <div
+            class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 text-center md:text-left"
+          >
             <div>
-              <span class="text-primary-fixed-dim text-[10px] font-bold tracking-widest uppercase mb-4 block">Volume Maximum</span>
-              <h3 class="font-headline-md text-headline-md mb-6">Le Pack Royal</h3>
-              <p class="font-body-md text-body-md text-white/80 mb-8 leading-relaxed">Pour celles qui ne font aucun compromis sur le volume. 4 bundles pour une densité exceptionnelle de la racine aux pointes.</p>
-              <ul class="space-y-4 mb-10 text-[14px]">
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-primary-fixed-dim" style="font-variation-settings: 'FILL' 1;">star</span>
-                  4 Bundles de luxe
-                </li>
-                <li class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-primary-fixed-dim" style="font-variation-settings: 'FILL' 1;">star</span>
-                  Frontal 13x4 ou Closure
-                </li>
-              </ul>
+              <span
+                class="font-label-lg text-label-lg text-secondary mb-2 block tracking-widest"
+                >OFFRES EXCLUSIVES</span
+              >
+              <h2
+                class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary"
+              >
+                Les Bundle Deals
+              </h2>
             </div>
-            <div>
-              <p class="font-label-lg text-headline-md text-secondary-fixed font-bold mb-6">Dès 450.000 FC</p>
-              <button class="w-full bg-white text-primary py-4 rounded-lg font-label-lg text-label-lg hover:bg-primary-fixed transition-all uppercase tracking-widest text-[12px]" type="button">Acheter Maintenant</button>
+            <p
+              class="font-body-md text-body-md text-on-surface-variant max-w-md"
+            >
+              Économisez sur votre installation complète avec nos packs de 3 ou
+              4 boules plus une closure assortie.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+            <!-- 3 Bundles Deal -->
+            <div
+              class="md:col-span-7 bg-background p-8 md:p-10 flex flex-col md:flex-row gap-10 items-center transition-all border border-outline-variant/20 rounded-2xl shadow-sm hover:shadow-md"
+            >
+              <div
+                class="w-full md:w-1/2 aspect-square rounded-xl overflow-hidden shadow-sm"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="assets/images/tissages/tissage-body-wave-dos-01.jpg"
+                  alt="Pack Essential"
+                />
+              </div>
+              <div class="w-full md:w-1/2">
+                <span
+                  class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase mb-4 inline-block tracking-wider"
+                  >Offre Populaire</span
+                >
+                <h3 class="font-headline-md text-headline-md text-primary mb-4">
+                  Pack Essential
+                </h3>
+                <ul class="space-y-3 mb-8 text-[14px]">
+                  <li class="flex items-center gap-2 text-on-surface-variant">
+                    <span
+                      class="material-symbols-outlined text-sm"
+                      data-icon="check_circle"
+                      >check_circle</span
+                    >
+                    3 Bundles (10" - 24")
+                  </li>
+                  <li class="flex items-center gap-2 text-on-surface-variant">
+                    <span
+                      class="material-symbols-outlined text-sm"
+                      data-icon="check_circle"
+                      >check_circle</span
+                    >
+                    1 Closure 4x4 assortie
+                  </li>
+                  <li class="flex items-center gap-2 text-on-surface-variant">
+                    <span
+                      class="material-symbols-outlined text-sm"
+                      data-icon="check_circle"
+                      >check_circle</span
+                    >
+                    Lace Suisse invisible
+                  </li>
+                </ul>
+                <div class="mb-8">
+                  <p class="text-on-surface-variant/60 line-through text-sm">
+                    385.000 FC
+                  </p>
+                  <p
+                    class="font-label-lg text-display-lg-mobile text-primary font-bold"
+                  >
+                    345.000 FC
+                  </p>
+                </div>
+                <button
+                  class="w-full border border-primary text-primary py-3 rounded-lg font-label-lg text-label-lg hover:bg-primary hover:text-white transition-all uppercase tracking-widest text-[11px]"
+                  type="button"
+                >
+                  Personnaliser mon pack
+                </button>
+              </div>
+            </div>
+            <!-- 4 Bundles Deal -->
+            <div
+              class="md:col-span-5 bg-primary p-8 md:p-10 text-white flex flex-col justify-between rounded-2xl shadow-sm hover:shadow-md"
+            >
+              <div>
+                <span
+                  class="text-primary-fixed-dim text-[10px] font-bold tracking-widest uppercase mb-4 block"
+                  >Volume Maximum</span
+                >
+                <h3 class="font-headline-md text-headline-md mb-6">
+                  Le Pack Royal
+                </h3>
+                <p
+                  class="font-body-md text-body-md text-white/80 mb-8 leading-relaxed"
+                >
+                  Pour celles qui ne font aucun compromis sur le volume. 4
+                  bundles pour une densité exceptionnelle de la racine aux
+                  pointes.
+                </p>
+                <ul class="space-y-4 mb-10 text-[14px]">
+                  <li class="flex items-center gap-3">
+                    <span
+                      class="material-symbols-outlined text-primary-fixed-dim"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    4 Bundles de luxe
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <span
+                      class="material-symbols-outlined text-primary-fixed-dim"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    Frontal 13x4 ou Closure
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p
+                  class="font-label-lg text-headline-md text-secondary-fixed font-bold mb-6"
+                >
+                  Dès 450.000 FC
+                </p>
+                <button
+                  class="w-full bg-white text-primary py-4 rounded-lg font-label-lg text-label-lg hover:bg-primary-fixed transition-all uppercase tracking-widest text-[12px]"
+                  type="button"
+                >
+                  Acheter Maintenant
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Product Grid: Closures & Frontals -->
-    <section class="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-      <div class="flex items-center justify-between mb-16">
-        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Lace &amp; Finitions</h2>
-        <a class="font-label-lg text-label-lg text-primary border-b border-primary uppercase tracking-wider" href="boutique.html">Tout voir</a>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-gutter gap-y-16" data-products-grid>
-        <!-- Loaded dynamically from PRODUCTS via initTissagesPage() -->
-      </div>
-    </section>
+      <!-- Product Grid: Closures & Frontals -->
+      <section
+        class="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div class="flex items-center justify-between mb-16">
+          <h2
+            class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary"
+          >
+            Lace &amp; Finitions
+          </h2>
+          <a
+            class="font-label-lg text-label-lg text-primary border-b border-primary uppercase tracking-wider"
+            href="boutique.html"
+            >Tout voir</a
+          >
+        </div>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-gutter gap-y-16"
+          data-products-grid
+        >
+          <!-- Loaded dynamically from PRODUCTS via initTissagesPage() -->
+        </div>
+      </section>
 
-    <!-- Features/Quality Proof -->
-    <section class="bg-primary text-white py-16 md:py-24 px-margin-mobile md:px-margin-desktop">
-      <div class="max-w-container-max mx-auto">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-center">
-          <div class="flex flex-col items-center">
-            <span class="material-symbols-outlined text-4xl mb-4 text-primary-fixed-dim">verified</span>
-            <h5 class="font-label-lg text-label-lg mb-2 uppercase">100% Raw Virgin</h5>
-            <p class="text-white/60 text-sm">Sans aucun traitement chimique, sourcé à la source.</p>
-          </div>
-          <div class="flex flex-col items-center">
-            <span class="material-symbols-outlined text-4xl mb-4 text-primary-fixed-dim">brush</span>
-            <h5 class="font-label-lg text-label-lg mb-2 uppercase">Teinture Facile</h5>
-            <p class="text-white/60 text-sm">Blanchit jusqu'au blond #613 sans abîmer la fibre.</p>
-          </div>
-          <div class="flex flex-col items-center">
-            <span class="material-symbols-outlined text-4xl mb-4 text-primary-fixed-dim">history</span>
-            <h5 class="font-label-lg text-label-lg mb-2 uppercase">Longévité 3 Ans+</h5>
-            <p class="text-white/60 text-sm">Une qualité qui dure avec les soins appropriés.</p>
-          </div>
-          <div class="flex flex-col items-center">
-            <span class="material-symbols-outlined text-4xl mb-4 text-primary-fixed-dim">local_shipping</span>
-            <h5 class="font-label-lg text-label-lg mb-2 uppercase">Livraison Bukavu</h5>
-            <p class="text-white/60 text-sm">Livraison express sécurisée à domicile ou bureau.</p>
+      <!-- Features/Quality Proof -->
+      <section
+        class="bg-primary text-white py-16 md:py-24 px-margin-mobile md:px-margin-desktop"
+      >
+        <div class="max-w-container-max mx-auto">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-center"
+          >
+            <div class="flex flex-col items-center">
+              <span
+                class="material-symbols-outlined text-4xl mb-4 text-primary-fixed-dim"
+                >verified</span
+              >
+              <h5 class="font-label-lg text-label-lg mb-2 uppercase">
+                100% Raw Virgin
+              </h5>
+              <p class="text-white/60 text-sm">
+                Sans aucun traitement chimique, sourcé à la source.
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <span
+                class="material-symbols-outlined text-4xl mb-4 text-primary-fixed-dim"
+                >brush</span
+              >
+              <h5 class="font-label-lg text-label-lg mb-2 uppercase">
+                Teinture Facile
+              </h5>
+              <p class="text-white/60 text-sm">
+                Blanchit jusqu'au blond #613 sans abîmer la fibre.
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <span
+                class="material-symbols-outlined text-4xl mb-4 text-primary-fixed-dim"
+                >history</span
+              >
+              <h5 class="font-label-lg text-label-lg mb-2 uppercase">
+                Longévité 3 Ans+
+              </h5>
+              <p class="text-white/60 text-sm">
+                Une qualité qui dure avec les soins appropriés.
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <span
+                class="material-symbols-outlined text-4xl mb-4 text-primary-fixed-dim"
+                >local_shipping</span
+              >
+              <h5 class="font-label-lg text-label-lg mb-2 uppercase">
+                Livraison Bukavu
+              </h5>
+              <p class="text-white/60 text-sm">
+                Livraison express sécurisée à domicile ou bureau.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <!-- Footer -->
-  <footer class="bg-surface-container-high dark:bg-surface-container-highest w-full">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-16 md:py-section-gap max-w-container-max mx-auto">
-      <div class="space-y-5">
-        <div class="font-headline-lg text-headline-lg text-primary">HM CABELLO</div>
-        <p class="font-body-md text-body-md text-on-surface-variant">L'excellence capillaire au coeur de Bukavu. Perruques, tissages, extensions et clip-ins premium.</p>
-      </div>
-      <div>
-        <h3 class="font-label-lg text-label-lg uppercase text-primary mb-6">Collections</h3>
-        <div class="space-y-3 font-body-md text-body-md text-on-surface-variant">
-          <a class="block hover:text-primary" href="perruques.html">Perruques</a>
-          <a class="block hover:text-primary" href="tissages.html">Tissages</a>
-          <a class="block hover:text-primary" href="clip-ins.html">Clip-ins</a>
-          <a class="block hover:text-primary" href="bijoux.html">Bijoux</a>
+    <!-- Footer -->
+    <footer
+      class="bg-surface-container-high dark:bg-surface-container-highest w-full"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-16 md:py-section-gap max-w-container-max mx-auto"
+      >
+        <div class="space-y-5">
+          <div class="font-headline-lg text-headline-lg text-primary">
+            HM CABELLO
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant">
+            L'excellence capillaire au coeur de Bukavu. Perruques, tissages,
+            extensions et clip-ins premium.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-label-lg text-label-lg uppercase text-primary mb-6">
+            Collections
+          </h3>
+          <div
+            class="space-y-3 font-body-md text-body-md text-on-surface-variant"
+          >
+            <a class="block hover:text-primary" href="perruques.html"
+              >Perruques</a
+            >
+            <a class="block hover:text-primary" href="tissages.html"
+              >Tissages</a
+            >
+            <a class="block hover:text-primary" href="clip-ins.html"
+              >Clip-ins</a
+            >
+            <a class="block hover:text-primary" href="bijoux.html">Bijoux</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-label-lg text-label-lg uppercase text-primary mb-6">
+            Boutique
+          </h3>
+          <div
+            class="space-y-3 font-body-md text-body-md text-on-surface-variant"
+          >
+            <a class="block hover:text-primary" href="boutique.html"
+              >Catalogue</a
+            >
+            <a class="block hover:text-primary" href="contact.html">Contact</a>
+            <a
+              class="block hover:text-primary"
+              href="https://wa.me/243977565432"
+              target="_blank"
+              rel="noopener"
+              >WhatsApp</a
+            >
+          </div>
+        </div>
+        <div>
+          <h3 class="font-label-lg text-label-lg uppercase text-primary mb-6">
+            Adresse
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">
+            Place Mulamba, Bukavu, RDC<br />À côté de chez Mama Kinja<br />contact@hm-cabello.cd
+          </p>
         </div>
       </div>
-      <div>
-        <h3 class="font-label-lg text-label-lg uppercase text-primary mb-6">Boutique</h3>
-        <div class="space-y-3 font-body-md text-body-md text-on-surface-variant">
-          <a class="block hover:text-primary" href="boutique.html">Catalogue</a>
-          <a class="block hover:text-primary" href="contact.html">Contact</a>
-          <a class="block hover:text-primary" href="https://wa.me/243977565432" target="_blank" rel="noopener">WhatsApp</a>
-        </div>
+      <div
+        class="border-t border-outline-variant/50 px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto font-label-sm text-label-sm text-on-surface-variant"
+      >
+        &copy; 2026 HM CABELLO. Place Mulamba, Bukavu. Tous droits réservés.
       </div>
-      <div>
-        <h3 class="font-label-lg text-label-lg uppercase text-primary mb-6">Adresse</h3>
-        <p class="font-body-md text-body-md text-on-surface-variant">
-          Place Mulamba, Bukavu, RDC<br>À côté de chez Mama Kinja<br>contact@hm-cabello.cd
-        </p>
-      </div>
-    </div>
-    <div class="border-t border-outline-variant/50 px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto font-label-sm text-label-sm text-on-surface-variant">
-      &copy; 2026 HM CABELLO. Place Mulamba, Bukavu. Tous droits réservés.
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Fixed WhatsApp Button -->
-  <a class="fixed bottom-8 right-8 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-50" href="https://wa.me/243977565432" target="_blank">
-    <svg fill="currentColor" height="32" viewBox="0 0 16 16" width="32" xmlns="http://www.w3.org/2000/svg">
-      <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.585zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
-    </svg>
-  </a>
+    <!-- Fixed WhatsApp Button -->
+    <a
+      class="fixed bottom-8 right-8 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-50"
+      href="https://wa.me/243977565432"
+      target="_blank"
+    >
+      <svg
+        fill="currentColor"
+        height="32"
+        viewBox="0 0 16 16"
+        width="32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.585zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+        ></path>
+      </svg>
+    </a>
 
-  <!-- Script Imports -->
-  <script src="assets/js/products.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
+    <!-- Script Imports -->
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

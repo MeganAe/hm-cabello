@@ -107,20 +107,24 @@
       </aside>
 
       <div class="hm-toast rounded-lg" data-ui-toast></div>
-    `
+    `,
     );
 
-    document.querySelectorAll("[data-close-ui], [data-ui-overlay]").forEach((button) => {
-      button.addEventListener("click", closeUi);
-    });
+    document
+      .querySelectorAll("[data-close-ui], [data-ui-overlay]")
+      .forEach((button) => {
+        button.addEventListener("click", closeUi);
+      });
 
-    document.querySelector("[data-search-form]")?.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const query = new FormData(event.currentTarget).get("search").trim();
-      if (query) {
-        window.location.href = `boutique.html?search=${encodeURIComponent(query)}`;
-      }
-    });
+    document
+      .querySelector("[data-search-form]")
+      ?.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const query = new FormData(event.currentTarget).get("search").trim();
+        if (query) {
+          window.location.href = `boutique.html?search=${encodeURIComponent(query)}`;
+        }
+      });
 
     renderProfileModal();
   }
@@ -178,15 +182,21 @@
           </div>
         </div>
       `;
-      container.querySelector("[data-close-ui]").addEventListener("click", closeUi);
-      container.querySelector("[data-edit-profile]").addEventListener("click", () => {
-        renderProfileForm(state.profile);
-      });
-      container.querySelector("[data-delete-profile]").addEventListener("click", () => {
-        saveProfile(null);
-        renderProfileModal();
-        showToast("Informations de compte supprimées.");
-      });
+      container
+        .querySelector("[data-close-ui]")
+        .addEventListener("click", closeUi);
+      container
+        .querySelector("[data-edit-profile]")
+        .addEventListener("click", () => {
+          renderProfileForm(state.profile);
+        });
+      container
+        .querySelector("[data-delete-profile]")
+        .addEventListener("click", () => {
+          saveProfile(null);
+          renderProfileModal();
+          showToast("Informations de compte supprimées.");
+        });
     } else {
       renderProfileForm(null);
     }
@@ -218,26 +228,32 @@
         </div>
       </form>
     `;
-    container.querySelector("[data-close-ui]").addEventListener("click", closeUi);
+    container
+      .querySelector("[data-close-ui]")
+      .addEventListener("click", closeUi);
     if (profile) {
-      container.querySelector("[data-cancel-edit]").addEventListener("click", () => {
-        renderProfileModal();
-      });
+      container
+        .querySelector("[data-cancel-edit]")
+        .addEventListener("click", () => {
+          renderProfileModal();
+        });
     }
 
-    container.querySelector("[data-profile-form]").addEventListener("submit", (e) => {
-      e.preventDefault();
-      const data = new FormData(e.currentTarget);
-      const newProfile = {
-        name: data.get("name").trim(),
-        phone: data.get("phone").trim(),
-        address: data.get("address").trim(),
-      };
-      saveProfile(newProfile);
-      renderProfileModal();
-      renderCart(); // Refresh WhatsApp link with new profile data
-      showToast("Coordonnées de livraison enregistrées !");
-    });
+    container
+      .querySelector("[data-profile-form]")
+      .addEventListener("submit", (e) => {
+        e.preventDefault();
+        const data = new FormData(e.currentTarget);
+        const newProfile = {
+          name: data.get("name").trim(),
+          phone: data.get("phone").trim(),
+          address: data.get("address").trim(),
+        };
+        saveProfile(newProfile);
+        renderProfileModal();
+        renderCart(); // Refresh WhatsApp link with new profile data
+        showToast("Coordonnées de livraison enregistrées !");
+      });
   }
 
   // --- Cart Actions ---
@@ -251,7 +267,7 @@
         title: product.title,
         price: product.price,
         image: product.image,
-        qty: 1
+        qty: 1,
       });
     }
     saveCart();
@@ -293,7 +309,10 @@
       return `- *${item.title}* x${item.qty} (${formatMoney(item.price * item.qty)})`;
     });
 
-    const total = state.cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+    const total = state.cart.reduce(
+      (sum, item) => sum + item.price * item.qty,
+      0,
+    );
 
     return `Bonjour HM CABELLO, je souhaite passer une commande :\n\n${clientStr}*Articles :*\n${lines.join("\n")}\n\n*Total :* ${formatMoney(total)}\n\nMerci de me recontacter pour confirmer la livraison.`;
   }
@@ -303,13 +322,18 @@
     const list = document.querySelector("[data-cart-items]");
     const totalNode = document.querySelector("[data-cart-total]");
     const whatsapp = document.querySelector("[data-cart-whatsapp]");
-    const total = state.cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+    const total = state.cart.reduce(
+      (sum, item) => sum + item.price * item.qty,
+      0,
+    );
 
     if (!state.cart.length) {
-      list.innerHTML = '<p class="font-body-md text-body-md text-on-surface-variant text-center py-8">Votre panier est vide.</p>';
+      list.innerHTML =
+        '<p class="font-body-md text-body-md text-on-surface-variant text-center py-8">Votre panier est vide.</p>';
     } else {
       list.innerHTML = state.cart
-        .map((item) => `
+        .map(
+          (item) => `
           <div class="flex gap-4 border-b border-outline-variant/30 pb-5">
             <img class="w-16 h-20 object-cover bg-surface-container rounded" src="${item.image}" alt="${item.title}" />
             <div class="flex-1">
@@ -323,7 +347,8 @@
               </div>
             </div>
           </div>
-        `)
+        `,
+        )
         .join("");
     }
 
@@ -380,11 +405,15 @@
       </div>
     `;
 
-    document.querySelector("[data-product-content] [data-close-ui]").addEventListener("click", closeUi);
-    document.querySelector("[data-add-active-product]").addEventListener("click", () => {
-      addToCart(state.activeProduct);
-      closeUi();
-    });
+    document
+      .querySelector("[data-product-content] [data-close-ui]")
+      .addEventListener("click", closeUi);
+    document
+      .querySelector("[data-add-active-product]")
+      .addEventListener("click", () => {
+        addToCart(state.activeProduct);
+        closeUi();
+      });
 
     openPanel("[data-ui-product]");
   }
@@ -404,7 +433,9 @@
       return;
     }
 
-    container.innerHTML = productsList.map((product) => `
+    container.innerHTML = productsList
+      .map(
+        (product) => `
       <div class="group flex flex-col product-card p-4 bg-white/40 border border-outline-variant/10 rounded-2xl transition-all duration-300 hover:shadow-lg hover:bg-white" data-id="${product.id}">
         <div class="relative overflow-hidden aspect-[3/4] mb-4 bg-surface-container-low rounded-xl">
           <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="${product.image}" alt="${product.title}" />
@@ -424,7 +455,9 @@
           <button class="w-full bg-primary text-white font-label-lg py-3 rounded-lg hover:bg-primary-container transition-colors uppercase tracking-widest text-[12px]" type="button" data-action="add-to-cart">Ajouter au panier</button>
         </div>
       </div>
-    `).join("");
+    `,
+      )
+      .join("");
 
     // Bind action events
     container.querySelectorAll(".product-card").forEach((card) => {
@@ -432,12 +465,16 @@
       const product = productsList.find((p) => p.id === pid);
       if (!product) return;
 
-      card.querySelector('[data-action="quick-view"]')?.addEventListener("click", () => {
-        openQuickView(product);
-      });
-      card.querySelector('[data-action="add-to-cart"]')?.addEventListener("click", () => {
-        addToCart(product);
-      });
+      card
+        .querySelector('[data-action="quick-view"]')
+        ?.addEventListener("click", () => {
+          openQuickView(product);
+        });
+      card
+        .querySelector('[data-action="add-to-cart"]')
+        ?.addEventListener("click", () => {
+          addToCart(product);
+        });
     });
   }
 
@@ -446,14 +483,16 @@
   // 1. Homepage (index.html)
   function initHomepage() {
     const path = window.location.pathname;
-    const isHomepage = path.includes("index.html") || path.endsWith("/") || path === "";
+    const isHomepage =
+      path.includes("index.html") || path.endsWith("/") || path === "";
     if (!isHomepage) return;
     const featuredContainer = document.querySelector("[data-products-grid]");
     if (!featuredContainer) return;
 
     // Show 8 products: Best Sellers, Nouveaux and Bijoux
-    const featured = PRODUCTS.filter(p =>
-      p.tag === "Best Seller" || p.tag === "Nouveau" || p.tag === "Bijoux"
+    const featured = PRODUCTS.filter(
+      (p) =>
+        p.tag === "Best Seller" || p.tag === "Nouveau" || p.tag === "Bijoux",
     ).slice(0, 8);
     renderProductsGrid(featuredContainer, featured);
   }
@@ -468,10 +507,10 @@
     let activeFilter = "TOUT VOIR";
 
     function filterWigs() {
-      let filtered = PRODUCTS.filter(p => p.category === "perruque");
+      let filtered = PRODUCTS.filter((p) => p.category === "perruque");
       if (activeFilter !== "TOUT VOIR") {
         const key = activeFilter.toLowerCase();
-        filtered = filtered.filter(p => {
+        filtered = filtered.filter((p) => {
           if (key.includes("lace front")) return p.subCategory === "Lace Front";
           if (key.includes("full lace")) return p.subCategory === "Full Lace";
           if (key.includes("360")) return p.subCategory === "360 Wigs";
@@ -482,9 +521,9 @@
       renderProductsGrid(grid, filtered);
     }
 
-    filterButtons.forEach(btn => {
+    filterButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
-        filterButtons.forEach(b => {
+        filterButtons.forEach((b) => {
           b.classList.remove("text-primary", "border-b-2", "border-primary");
           b.classList.add("text-on-surface-variant");
         });
@@ -506,7 +545,7 @@
     if (!grid) return;
 
     // Render all tissages (Lace & finitions section)
-    const tissages = PRODUCTS.filter(p => p.category === "tissage");
+    const tissages = PRODUCTS.filter((p) => p.category === "tissage");
     renderProductsGrid(grid, tissages);
   }
 
@@ -516,7 +555,7 @@
     const grid = document.querySelector("[data-products-grid]");
     if (!grid) return;
 
-    const clips = PRODUCTS.filter(p => p.category === "clip");
+    const clips = PRODUCTS.filter((p) => p.category === "clip");
     renderProductsGrid(grid, clips);
   }
 
@@ -525,21 +564,25 @@
     const grid = document.querySelector("[data-bijoux-grid]");
     if (!grid || !window.location.pathname.includes("bijoux.html")) return;
 
-    const filterButtons = document.querySelectorAll("[data-bijoux-filter] button");
+    const filterButtons = document.querySelectorAll(
+      "[data-bijoux-filter] button",
+    );
     let activeFilter = "TOUT";
 
     function filterJewelry() {
-      let filtered = PRODUCTS.filter(p => p.category === "bijoux");
+      let filtered = PRODUCTS.filter((p) => p.category === "bijoux");
       if (activeFilter !== "TOUT") {
         const key = activeFilter.toLowerCase();
-        filtered = filtered.filter(p => p.subCategory.toLowerCase().includes(key.slice(0, 4)));
+        filtered = filtered.filter((p) =>
+          p.subCategory.toLowerCase().includes(key.slice(0, 4)),
+        );
       }
       renderProductsGrid(grid, filtered);
     }
 
-    filterButtons.forEach(btn => {
+    filterButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
-        filterButtons.forEach(b => {
+        filterButtons.forEach((b) => {
           b.classList.remove("text-primary", "border-b-2", "border-primary");
           b.classList.add("text-on-surface-variant");
         });
@@ -561,9 +604,15 @@
     if (!grid) return;
 
     // Filters refs
-    const categoryCheckboxes = document.querySelectorAll("aside input[type='checkbox']");
-    const textureRadios = document.querySelectorAll("aside input[type='radio']");
-    const lengthButtons = document.querySelectorAll("[data-length-filters] button");
+    const categoryCheckboxes = document.querySelectorAll(
+      "aside input[type='checkbox']",
+    );
+    const textureRadios = document.querySelectorAll(
+      "aside input[type='radio']",
+    );
+    const lengthButtons = document.querySelectorAll(
+      "[data-length-filters] button",
+    );
     const priceRange = document.querySelector("[data-price-range]");
     const priceDisplay = document.querySelector("[data-price-display]");
     const sortSelect = document.querySelector("[data-sort-select]");
@@ -577,7 +626,9 @@
     if (filterToggle && filterContent) {
       filterToggle.addEventListener("click", () => {
         const isCollapsed = filterContent.classList.toggle("hidden");
-        filterToggle.querySelector("span:last-child").textContent = isCollapsed ? "FILTRER & TRIER" : "MASQUER LES FILTRES";
+        filterToggle.querySelector("span:last-child").textContent = isCollapsed
+          ? "FILTRER & TRIER"
+          : "MASQUER LES FILTRES";
       });
     }
 
@@ -585,7 +636,10 @@
     let selectedTexture = "";
     let selectedLengthGroup = "";
     let maxPrice = 2500000;
-    let searchQuery = new URLSearchParams(window.location.search).get("search")?.toLowerCase() || "";
+    let searchQuery =
+      new URLSearchParams(window.location.search)
+        .get("search")
+        ?.toLowerCase() || "";
 
     // Sync search input if searched
     if (searchQuery) {
@@ -593,10 +647,14 @@
     }
 
     // Length logic
-    lengthButtons.forEach(btn => {
+    lengthButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
-        lengthButtons.forEach(b => {
-          b.classList.remove("border-primary", "text-primary", "bg-surface-container");
+        lengthButtons.forEach((b) => {
+          b.classList.remove(
+            "border-primary",
+            "text-primary",
+            "bg-surface-container",
+          );
           b.classList.add("border-outline-variant", "text-on-surface-variant");
         });
 
@@ -605,8 +663,15 @@
           selectedLengthGroup = ""; // toggle off
         } else {
           selectedLengthGroup = txt;
-          btn.classList.remove("border-outline-variant", "text-on-surface-variant");
-          btn.classList.add("border-primary", "text-primary", "bg-surface-container");
+          btn.classList.remove(
+            "border-outline-variant",
+            "text-on-surface-variant",
+          );
+          btn.classList.add(
+            "border-primary",
+            "text-primary",
+            "bg-surface-container",
+          );
         }
         applyAllFilters();
       });
@@ -622,12 +687,15 @@
       });
     }
 
-    categoryCheckboxes.forEach(cb => {
+    categoryCheckboxes.forEach((cb) => {
       cb.addEventListener("change", () => {
         selectedCategories = [];
-        categoryCheckboxes.forEach(input => {
+        categoryCheckboxes.forEach((input) => {
           if (input.checked) {
-            const label = input.closest("label").textContent.trim().toLowerCase();
+            const label = input
+              .closest("label")
+              .textContent.trim()
+              .toLowerCase();
             selectedCategories.push(label);
           }
         });
@@ -635,12 +703,15 @@
       });
     });
 
-    textureRadios.forEach(radio => {
+    textureRadios.forEach((radio) => {
       radio.addEventListener("change", () => {
         selectedTexture = "";
-        textureRadios.forEach(input => {
+        textureRadios.forEach((input) => {
           if (input.checked) {
-            selectedTexture = input.closest("label").textContent.trim().toLowerCase();
+            selectedTexture = input
+              .closest("label")
+              .textContent.trim()
+              .toLowerCase();
           }
         });
         applyAllFilters();
@@ -659,7 +730,8 @@
         if (window.innerWidth < 768 && filterContent) {
           // Collapse on mobile after applying
           filterContent.classList.add("hidden");
-          filterToggle.querySelector("span:last-child").textContent = "FILTRER & TRIER";
+          filterToggle.querySelector("span:last-child").textContent =
+            "FILTRER & TRIER";
         }
       });
     }
@@ -667,21 +739,29 @@
     function lengthMatches(productLength) {
       if (!selectedLengthGroup) return true;
       if (!productLength) return false; // for items without length (jewelry)
-      if (selectedLengthGroup.includes("12-16")) return productLength >= 12 && productLength <= 16;
-      if (selectedLengthGroup.includes("18-22")) return productLength >= 18 && productLength <= 22;
-      if (selectedLengthGroup.includes("24-28")) return productLength >= 24 && productLength <= 28;
+      if (selectedLengthGroup.includes("12-16"))
+        return productLength >= 12 && productLength <= 16;
+      if (selectedLengthGroup.includes("18-22"))
+        return productLength >= 18 && productLength <= 22;
+      if (selectedLengthGroup.includes("24-28"))
+        return productLength >= 24 && productLength <= 28;
       if (selectedLengthGroup.includes("30")) return productLength >= 30;
       return true;
     }
 
     function categoryMatches(product) {
       if (!selectedCategories.length) return true;
-      return selectedCategories.some(catLabel => {
-        if (catLabel.includes("perruque")) return product.category === "perruque";
+      return selectedCategories.some((catLabel) => {
+        if (catLabel.includes("perruque"))
+          return product.category === "perruque";
         if (catLabel.includes("tissage")) return product.category === "tissage";
         if (catLabel.includes("clip")) return product.category === "clip";
         if (catLabel.includes("bijou")) return product.category === "bijoux";
-        if (catLabel.includes("lace")) return product.title.toLowerCase().includes("lace") || product.description.toLowerCase().includes("lace");
+        if (catLabel.includes("lace"))
+          return (
+            product.title.toLowerCase().includes("lace") ||
+            product.description.toLowerCase().includes("lace")
+          );
         return false;
       });
     }
@@ -693,11 +773,15 @@
         // Length Filter
         const lenOk = lengthMatches(product.length);
         // Texture Filter
-        const textOk = !selectedTexture || (product.texture && product.texture.toLowerCase().includes(selectedTexture));
+        const textOk =
+          !selectedTexture ||
+          (product.texture &&
+            product.texture.toLowerCase().includes(selectedTexture));
         // Price Filter
         const priceOk = product.price <= maxPrice;
         // Search Filter
-        const searchStr = `${product.title} ${product.description} ${product.category}`.toLowerCase();
+        const searchStr =
+          `${product.title} ${product.description} ${product.category}`.toLowerCase();
         const searchOk = !searchQuery || searchStr.includes(searchQuery);
 
         return catOk && lenOk && textOk && priceOk && searchOk;
@@ -710,7 +794,11 @@
       } else if (sortIdx === 2) {
         filtered.sort((a, b) => b.price - a.price);
       } else if (sortIdx === 3) {
-        filtered.sort((a, b) => (b.tag === "Best Seller" ? 1 : 0) - (a.tag === "Best Seller" ? 1 : 0));
+        filtered.sort(
+          (a, b) =>
+            (b.tag === "Best Seller" ? 1 : 0) -
+            (a.tag === "Best Seller" ? 1 : 0),
+        );
       }
 
       // Render the catalog grid
@@ -791,7 +879,7 @@
         window.open(
           `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`,
           "_blank",
-          "noopener"
+          "noopener",
         );
         showToast("Votre message est prêt dans WhatsApp.");
       });
@@ -811,7 +899,7 @@
     initClipinsPage();
     initBijouxPage();
     initBoutiqueCatalog();
-    
+
     // Smooth fade scroll intersections — only for sections that start below viewport
     const observerOptions = { threshold: 0.08 };
     const observer = new IntersectionObserver((entries) => {
@@ -829,7 +917,7 @@
       const rect = section.getBoundingClientRect();
       const isInView = rect.top < window.innerHeight && rect.bottom > 0;
       const hasProductGrid = section.querySelector(
-        "[data-products-grid], [data-bijoux-grid]"
+        "[data-products-grid], [data-bijoux-grid]",
       );
       if (isInView || hasProductGrid) return;
 
@@ -837,7 +925,7 @@
         "transition-all",
         "duration-700",
         "opacity-0",
-        "translate-y-8"
+        "translate-y-8",
       );
       observer.observe(section);
     });
