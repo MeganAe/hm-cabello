@@ -44,7 +44,7 @@
   }
 
   function formatMoney(value) {
-    return `${String(value).replace(/\B(?=(\d{3})+(?!\d))/g, ".")} FC`;
+    return `${Number(value).toFixed(0)} $`;
   }
 
   function updateCartCount() {
@@ -549,14 +549,160 @@
     renderProductsGrid(grid, tissages);
   }
 
-  // 4. Clip-ins Page (clip-ins.html)
-  function initClipinsPage() {
-    if (!window.location.pathname.includes("clip-ins.html")) return;
-    const grid = document.querySelector("[data-products-grid]");
-    if (!grid) return;
+  // 4. Exposition Page (exposition.html) — Lookbook sans prix
+  function initExpositionPage() {
+    if (!window.location.pathname.includes("exposition.html")) return;
+    const gallery = document.querySelector("[data-expo-gallery]");
+    if (!gallery) return;
 
-    const clips = PRODUCTS.filter((p) => p.category === "clip");
-    renderProductsGrid(grid, clips);
+    const items =
+      typeof EXPOSITION_ITEMS !== "undefined" ? EXPOSITION_ITEMS : [];
+    let currentFilter = "all";
+    let activeIndex = 0;
+    let filteredItems = [...items];
+
+    const filterButtons = document.querySelectorAll(
+      "[data-expo-filters] button",
+    );
+    const countDisplay = document.querySelector("[data-expo-count]");
+
+    // Lightbox elements
+    const lightbox = document.getElementById("expoLightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+    const lightboxTitle = document.getElementById("lightboxTitle");
+    const lightboxCategory = document.getElementById("lightboxCategory");
+    const lightboxIndex = document.getElementById("lightboxIndex");
+    const closeBtn = document.getElementById("closeLightbox");
+    const prevBtn = document.getElementById("prevLightbox");
+    const nextBtn = document.getElementById("nextLightbox");
+
+    function renderGallery() {
+      filteredItems = items.filter((item) => {
+        if (currentFilter === "all") return true;
+        return item.category === currentFilter;
+      });
+
+      if (countDisplay) {
+        countDisplay.textContent = `${filteredItems.length} créations d'exposition`;
+      }
+
+      gallery.innerHTML = filteredItems
+        .map(
+          (item, idx) => `
+        <div class="gallery-item group relative overflow-hidden rounded-xl bg-surface-container-high/40 border border-outline-variant/30 cursor-pointer transition-all duration-300 hover:shadow-xl" data-index="${idx}">
+          <div class="relative overflow-hidden bg-black/5">
+            <img
+              src="${item.image}"
+              alt="${item.title}"
+              loading="lazy"
+              class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+            />
+            <div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-5 flex flex-col justify-end text-white">
+              <span class="inline-block self-start font-label-sm text-[10px] uppercase tracking-widest bg-secondary-fixed text-on-secondary-fixed px-2.5 py-1 rounded mb-2 font-semibold">
+                ${item.badge}
+              </span>
+              <h3 class="font-headline-md text-base md:text-lg text-white mb-1.5 leading-snug">
+                ${item.title}
+              </h3>
+              <p class="font-body-md text-xs text-white/80 line-clamp-2 mb-3">
+                ${item.description}
+              </p>
+              <div class="flex items-center gap-2 text-xs font-label-sm text-secondary-fixed">
+                <span class="material-symbols-outlined text-[16px]">zoom_in</span>
+                <span>Cliquer pour agrandir</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `,
+        )
+        .join("");
+
+      gallery.querySelectorAll(".gallery-item").forEach((card) => {
+        card.addEventListener("click", () => {
+          const idx = parseInt(card.dataset.index, 10);
+          openLightbox(idx);
+        });
+      });
+    }
+
+    function openLightbox(index) {
+      if (!lightbox || !filteredItems[index]) return;
+      activeIndex = index;
+      const item = filteredItems[activeIndex];
+
+      lightboxImg.src = item.image;
+      lightboxImg.alt = item.title;
+      lightboxTitle.textContent = item.title;
+      lightboxCategory.textContent = `${item.badge} — ${item.description}`;
+      lightboxIndex.textContent = `${activeIndex + 1} / ${filteredItems.length}`;
+
+      lightbox.classList.add("is-active");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+      if (!lightbox) return;
+      lightbox.classList.remove("is-active");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    function showPrev() {
+      if (filteredItems.length === 0) return;
+      activeIndex =
+        (activeIndex - 1 + filteredItems.length) % filteredItems.length;
+      openLightbox(activeIndex);
+    }
+
+    function showNext() {
+      if (filteredItems.length === 0) return;
+      activeIndex = (activeIndex + 1) % filteredItems.length;
+      openLightbox(activeIndex);
+    }
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        filterButtons.forEach((b) => {
+          b.classList.remove("text-primary", "border-b-2", "border-primary");
+          b.classList.add("text-on-surface-variant");
+        });
+        btn.classList.remove("text-on-surface-variant");
+        btn.classList.add("text-primary", "border-b-2", "border-primary");
+
+        currentFilter = btn.dataset.filter || "all";
+        renderGallery();
+      });
+    });
+
+    closeBtn?.addEventListener("click", closeLightbox);
+    prevBtn?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      showPrev();
+    });
+    nextBtn?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      showNext();
+    });
+
+    lightbox?.addEventListener("click", (e) => {
+      if (
+        e.target === lightbox ||
+        e.target.classList.contains("lightbox-modal")
+      ) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (!lightbox?.classList.contains("is-active")) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") showPrev();
+      if (e.key === "ArrowRight") showNext();
+    });
+
+    renderGallery(); // Initial render
   }
 
   // 5. Bijoux Page (bijoux.html)
@@ -635,7 +781,7 @@
     let selectedCategories = [];
     let selectedTexture = "";
     let selectedLengthGroup = "";
-    let maxPrice = 2500000;
+    let maxPrice = 300;
     let searchQuery =
       new URLSearchParams(window.location.search)
         .get("search")
@@ -896,7 +1042,7 @@
     initHomepage();
     initPerruquesPage();
     initTissagesPage();
-    initClipinsPage();
+    initExpositionPage();
     initBijouxPage();
     initBoutiqueCatalog();
 
